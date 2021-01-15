@@ -65,6 +65,7 @@ nav {
     display: block;
     text-align: center;
     vertical-align: middle;
+    height: 3rem;
 }
 
 nav ul {
@@ -79,6 +80,7 @@ nav li {
 nav li a {
     text-decoration: none;
     padding: 1rem;
+    color: inherit;
 }
 
 nav li a:hover {}
