@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400;600;800');
 
 html {font-size: 100%;} /*16px*/
 
@@ -7,7 +7,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
+  color: #555555;
 }
 
 /* ----- Fonts ----- */
@@ -35,11 +35,52 @@ h4 {font-size: 1.266rem;}
 
 h5 {font-size: 1.125rem;}
 
-small, .text_small {font-size: 0.889rem;}
+.text_small {font-size: 0.889rem;}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 800;
+}
 
 /* ----- Misc. Positions ----- */
 
 .center {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* ----- Colors ----- */
+
+.whiteTxt {
+    color: #ffffff;
+}
+
+/* ----- Nav-bar ----- */
+
+nav {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav li a:hover {}
+
+.active {}
