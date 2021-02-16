@@ -1,3 +1,8 @@
+/*  
+    CSSmall by Mads Lousdal 
+    github.com/MLousdal
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400;600;800');
 
 html {font-size: 100%;} /*16px*/
@@ -35,7 +40,7 @@ h4 {font-size: 1.266rem;}
 
 h5 {font-size: 1.125rem;}
 
-.text_small {font-size: 0.889rem;}
+.small-text {font-size: 0.889rem;}
 
 .semi-bold {
     font-weight: 600;
@@ -59,12 +64,21 @@ h5 {font-size: 1.125rem;}
     color: #ffffff;
 }
 
+.whiteBG {
+    background-color: #ffffff;
+}
+
+.dropShadow {
+    filter: drop-shadow(0px 3px 6px rgba(204, 204, 204, 0.7));
+}
+
+
 /* ----- Nav-bar ----- */
 
 nav {
     display: block;
     text-align: center;
-    vertical-align: middle;
+    align-items: center;
     height: 3rem;
 }
 
@@ -86,3 +100,81 @@ nav li a {
 nav li a:hover {}
 
 .active {}
+
+/* ----- Section ----- */
+
+section {
+    width: 90%;
+    margin: 0 auto 15px;
+}
+
+section img {
+    width: 100%;
+    padding-top: 5px;
+}
+
+/* ----- Article ----- */
+
+article {
+    padding: 0.4em;
+    margin: 0 auto 5px;
+}
+
+/* ----- Form ----- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+input[type=text] {
+    width: 80%;
+}
+
+select {
+    width: 25%;
+}
+
+/* ----- Table ----- */
+
+table {
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccccc;
+}
+td {
+    padding: 0.4em;
+
+}
+
+/* ----- Summary  ----- */
+
+details {
+    padding: 0.4em;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* ----- Icons ----- */
+
+.icon {
+    width: 3em;
+    height: 3em;
+    align-items: center;
+}
+
+.logo {
+    fill: #ffffff;
+    padding: 0.2em;
+}
