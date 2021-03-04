@@ -1,1 +1,3 @@
-debug.log
+**/logs
+
+**/.DS_Store
