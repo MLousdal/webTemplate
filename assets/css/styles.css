@@ -77,10 +77,12 @@ h5 {font-size: 1.125rem;}
 /* ----- Nav-bar ----- */
 
 nav {
-    display: block;
+    display: inline-flex;
     text-align: center;
     align-items: center;
-    height: 3rem;
+    justify-content: space-between;
+    /* height: 3rem; */
+    width: 100%;
 }
 
 nav ul {
@@ -92,7 +94,8 @@ nav li {
     justify-content: space-evenly;
 }
 
-nav li a {
+nav a,
+.nav-some {
     text-decoration: none;
     padding: 1rem;
     color: inherit;
@@ -101,6 +104,12 @@ nav li a {
 nav li a:hover {}
 
 .active {}
+
+.navBtn {
+    cursor: default;
+    pointer-events: none;
+    display: none;
+}
 
 /* ----- Section ----- */
 
@@ -178,4 +187,22 @@ details {
 .logo {
     fill: #ffffff;
     padding: 0.2em;
+}
+
+@media only screen and (max-width: 880px) {
+    nav {
+        align-items: flex-start;
+    }
+    .navBtn {
+        display: block;
+        cursor: pointer;
+        pointer-events: all;
+    }
+    .nav-links {
+        display: none;
+        height: fit-content;
+    }
+    nav li {
+        display: flex;
+    }
 }
