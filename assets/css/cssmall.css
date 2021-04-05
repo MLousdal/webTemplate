@@ -78,24 +78,20 @@
 /* ----- Classes ----- */
 
 /* Theme Colors */
-
 .color-primary {
 	background-color: var(--cssmall-color-primary);
 	color: var(--cssmall-color-text-on-primary);
 }
-
 .color-secondary {
 	background-color: var(--cssmall-color-secondary);
 	color: var(--cssmall-color-text-on-secondary);
 }
-
 .color-surface {
 	background-color: var(--cssmall-color-surface);
 	color: var(--cssmall-color-text-on-surface);
 }
 
 /* Neutral Colors */
-
 .color-neutral-white {background-color: var(--cssmall-color-neutral-white);}
 .color-neutral-lighterx {background-color: var(--cssmall-color-neutral-lighterx);}
 .color-neutral-lighter {background-color: var(--cssmall-color-neutral-lighter);}
@@ -103,17 +99,14 @@
 .color-neutral-dark {background-color: var(--cssmall-color-neutral-dark);}
 
 /* Notification colors */
-
 .color-succes {
     background-color: var(--cssmall-color-succes);
 	color: var(--cssmall-color-text-on-succes);
 }
-
 .color-warning {
     background-color: var(--cssmall-color-warning);
 	color: var(--cssmall-color-text-on-warning);
 }
-
 .color-error {
     background-color: var(--cssmall-color-error);
 	color: var(--cssmall-color-text-on-error);
