@@ -1,0 +1,171 @@
+/*  
+    CSSmall by Mads Lousdal 2021
+    github.com/MLousdal
+*/
+
+:root {
+    /* ----- Spacing variables */
+    --cssmall-spacing: 1rem; /* Base spacing */
+    --cssmall-spacing-multiplier-m: 2; 
+    --cssmall-spacing-multiplier-l: 3; 
+    --cssmall-spacing-multiplier-xl: 4;
+
+    /* Spacing translation */
+    /* For use insert fx. ´var(--cssmall-spacing-s)´ into the wanted property */
+    --cssmall-spacing-s: var(--cssmall-spacing);
+    --cssmall-spacing-m: calc(var(--cssmall-spacing) * var(--cssmall-spacing-multiplier-m));
+    --cssmall-spacing-l: calc(var(--cssmall-spacing) * var(--cssmall-spacing-multiplier-l));
+    --cssmall-spacing-xl: calc(var(--cssmall-spacing) * var(--cssmall-spacing-multiplier-xl));
+    
+    /* ----- Colors ----- */
+
+    /* --- Theme Colors --- */
+    --cssmall-color-primary: hsl(47, 100%, 50%);
+	--cssmall-color-secondary: hsl(227, 95%, 60%);
+    --cssmall-color-surface: hsl(47, 100%, 98%);
+
+     /* Text colors for theme */
+	--cssmall-color-text-on-primary: hsl(47, 100%, 10%);
+	--cssmall-color-text-on-secondary: hsl(47, 100%, 99%);
+	--cssmall-color-text-on-surface: hsl(47, 100%, 10%);
+
+    /* --- Neutral Colors --- */
+	--cssmall-color-neutral-white: hsl(0, 0%, 100%);
+	--cssmall-color-neutral-lighterx: hsl(0, 0%, 58%);
+	--cssmall-color-neutral-lighter: hsl(0, 0%, 38%);
+	--cssmall-color-neutral-light: hsl(0, 0%, 18%);
+	--cssmall-color-neutral-dark: hsl(0, 0%, 8%);
+
+    /* --- Notification colors --- */
+	--cssmall-color-succes: hsl(87, 71%, 45%);
+	--cssmall-color-warning: hsl(47, 78%, 55%);
+	--cssmall-color-error: hsl(7, 82%, 45%);
+
+    /* Text colors for notifications */
+    --cssmall-color-text-on-succes: hsl(47, 100%, 10%);
+	--cssmall-color-text-on-warning: hsl(47, 100%, 10%);
+	--cssmall-color-text-on-error: hsl(47, 100%, 99%);
+
+    /* ----- Shadows ----- */
+    --cssmall-shadow-normal: 10px 10px 40px;
+    --cssmall-shadow-btn: 3px 3px 20px;
+
+    /* --- Theme Colors --- */
+	--cssmall-shadow-primary: var(--cssmall-shadow-normal) var(--cssmall-color-primary);
+	--cssmall-shadow-primary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-primary);
+	--cssmall-shadow-secondary: var(--cssmall-shadow-normal) var(--cssmall-color-secondary);
+	--cssmall-shadow-secondary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-secondary);
+
+    /* --- Neutral Colors --- */
+	--cssmall-shadow-neutral-lighterx: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-lighterx);
+	--cssmall-shadow-neutral-lighterx-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-lighterx);
+	--cssmall-shadow-neutral-lighter: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-lighter);
+	--cssmall-shadow-neutral-lighter-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-lighter);
+	--cssmall-shadow-neutral-light: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-light);
+	--cssmall-shadow-neutral-light-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-light);
+	--cssmall-shadow-neutral-dark: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-dark);
+	--cssmall-shadow-neutral-dark-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-dark);
+
+    /* --- Notification colors --- */
+    --cssmall-shadow-succes: var(--cssmall-shadow-normal) var(--cssmall-color-succes);
+	--cssmall-shadow-succes-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-succes);
+    --cssmall-shadow-warning: var(--cssmall-shadow-normal) var(--cssmall-color-warning);
+	--cssmall-shadow-warning-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-warning);
+    --cssmall-shadow-error: var(--cssmall-shadow-normal) var(--cssmall-color-error);
+	--cssmall-shadow-error-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-error);
+}
+
+/* ----- Classes ----- */
+
+/* Theme Colors */
+
+.color-primary {
+	background-color: var(--cssmall-color-primary);
+	color: var(--cssmall-color-text-on-primary);
+}
+
+.color-secondary {
+	background-color: var(--cssmall-color-secondary);
+	color: var(--cssmall-color-text-on-secondary);
+}
+
+.color-surface {
+	background-color: var(--cssmall-color-surface);
+	color: var(--cssmall-color-text-on-surface);
+}
+
+/* Neutral Colors */
+
+.color-neutral-white {background-color: var(--cssmall-color-neutral-white);}
+.color-neutral-lighterx {background-color: var(--cssmall-color-neutral-lighterx);}
+.color-neutral-lighter {background-color: var(--cssmall-color-neutral-lighter);}
+.color-neutral-light {background-color: var(--cssmall-color-neutral-light);}
+.color-neutral-dark {background-color: var(--cssmall-color-neutral-dark);}
+
+/* Notification colors */
+
+.color-succes {
+    background-color: var(--cssmall-color-succes);
+	color: var(--cssmall-color-text-on-succes);
+}
+
+.color-warning {
+    background-color: var(--cssmall-color-warning);
+	color: var(--cssmall-color-text-on-warning);
+}
+
+.color-error {
+    background-color: var(--cssmall-color-error);
+	color: var(--cssmall-color-text-on-error);
+}
+
+/* --- shadows --- */
+/* Theme Colors */
+.shadow-primary {box-shadow: var(--cssmall-shadow-primary);}
+.shadow-secondary {box-shadow: var(--cssmall-shadow-secondary);}
+
+/* Neutral Colors */
+.shadow-neutral-lighterx {box-shadow: var(--cssmall-shadow-neutral-lighterx);}
+.shadow-neutral-lighter {box-shadow: var(--cssmall-shadow-neutral-lighter);}
+.shadow-neutral-light {box-shadow: var(--cssmall-shadow-neutral-light);}
+.shadow-neutral-dark {box-shadow: var(--cssmall-shadow-neutral-dark);}
+
+/* Notification colors */
+.shadow-succes {box-shadow: var(--cssmall-shadow-succes);}
+.shadow-warning {box-shadow: var(--cssmall-shadow-warning);}
+.shadow-error {box-shadow: var(--cssmall-shadow-error);}
+
+
+/* --- Button shadows --- */
+/* Theme Colors */
+.shadow-primary-btn {box-shadow: var(--cssmall-shadow-primary);}
+.shadow-primary-btn:hover,
+.shadow-primary-btn:focus {box-shadow: var(--cssmall-shadow-primary-pressed);}
+.shadow-secondary-btn {box-shadow: var(--cssmall-shadow-secondary);}
+.shadow-secondary-btn:hover,
+.shadow-secondary-btn:focus {box-shadow: var(--cssmall-shadow-secondary-pressed);}
+
+/* Neutral Colors */
+.shadow-neutral-lighterx-btn {box-shadow: var(--cssmall-shadow-neutral-lighterx);}
+.shadow-neutral-lighterx-btn:hover,
+.shadow-neutral-lighterx-btn:focus {box-shadow: var(--cssmall-shadow-neutral-lighterx-pressed);}
+.shadow-neutral-lighter-btn {box-shadow: var(--cssmall-shadow-neutral-lighter);}
+.shadow-neutral-lighter-btn:hover,
+.shadow-neutral-lighter-btn:focus {box-shadow: var(--cssmall-shadow-neutral-lighter-pressed);}
+.shadow-neutral-light-btn {box-shadow: var(--cssmall-shadow-neutral-light);}
+.shadow-neutral-light-btn:hover,
+.shadow-neutral-light-btn:focus {box-shadow: var(--cssmall-shadow-neutral-light-pressed);}
+.shadow-neutral-dark-btn {box-shadow: var(--cssmall-shadow-neutral-dark);}
+.shadow-neutral-dark-btn:hover,
+.shadow-neutral-dark-btn:focus {box-shadow: var(--cssmall-shadow-neutral-dark-pressed);}
+
+/* Notification colors */
+.shadow-succes-btn {box-shadow: var(--cssmall-shadow-succes);}
+.shadow-succes-btn:hover,
+.shadow-succes-btn:focus {box-shadow: var(--cssmall-shadow-succes-pressed);}
+.shadow-warning-btn {box-shadow: var(--cssmall-shadow-warning);}
+.shadow-warning-btn:hover,
+.shadow-warning-btn:focus {box-shadow: var(--cssmall-shadow-warning-pressed);}
+.shadow-error-btn {box-shadow: var(--cssmall-shadow-error);}
+.shadow-error-btn:hover,
+.shadow-error-btn:focus {box-shadow: var(--cssmall-shadow-error-pressed);}

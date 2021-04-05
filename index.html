@@ -7,12 +7,13 @@
         <meta name="description" content="WRITE A DESCRIPTION HERE!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/cssmall.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/all.css">
         <script src="assets/js/scripts.js" defer></script>
     </head>
-    <body>
-        <nav>
+    <body class="color-surface">
+        <nav class="color-primary">
             <img src="assets/images/ml.png">
             <ul id="nav-links">
                 <li><a href="#">LINK A</a></li>
@@ -24,5 +25,20 @@
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
+        <div class="slidecontainer center-flex">
+            <input type="range" min="1" max="100" value="50" class="slider color-neutral-lighterx" id="myRange">
+          </div>
+        <div class="toggle">
+            <label class="switch">
+              <input type="checkbox" id="toggle">
+              <span class="toggler round"></span>
+            </label>
+        </div>
+        <div class="center-flex">
+            <div class="color-secondary shadow-secondary-btn box">
+                <h1>TEST</h1>
+                <p>Spicy jalapeno bacon ipsum dolor amet t-bone chicken biltong fatback cupim, flank chuck buffalo beef ribs ham hock pancetta beef prosciutto corned beef. Buffalo pig flank short ribs shankle hamburger.</p>
+            </div>
+        </div>
     </body>
 </html>
