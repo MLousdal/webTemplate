@@ -21,12 +21,14 @@
 
     /* --- Theme Colors --- */
     --cssmall-color-primary: hsl(47, 100%, 50%);
-	--cssmall-color-secondary: hsl(227, 95%, 60%);
+	--cssmall-color-secondary: hsl(227, 100%, 50%);
+	--cssmall-color-tertiary: hsl(287, 100%, 50%);
     --cssmall-color-surface: hsl(47, 100%, 98%);
 
      /* Text colors for theme */
 	--cssmall-color-text-on-primary: hsl(47, 100%, 10%);
 	--cssmall-color-text-on-secondary: hsl(47, 100%, 99%);
+	--cssmall-color-text-on-tertiary: hsl(47, 100%, 10%);
 	--cssmall-color-text-on-surface: hsl(47, 100%, 10%);
 
     /* --- Neutral Colors --- */
@@ -37,9 +39,9 @@
 	--cssmall-color-neutral-dark: hsl(0, 0%, 20%);
 
     /* --- Notification colors --- */
-	--cssmall-color-succes: hsl(87, 71%, 45%);
+	--cssmall-color-succes: hsl(87, 78%, 55%);
 	--cssmall-color-warning: hsl(47, 78%, 55%);
-	--cssmall-color-error: hsl(7, 82%, 45%);
+	--cssmall-color-error: hsl(7, 78%, 55%);
 
     /* Text colors for notifications */
     --cssmall-color-text-on-succes: hsl(47, 100%, 10%);
@@ -55,6 +57,8 @@
 	--cssmall-shadow-primary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-primary);
 	--cssmall-shadow-secondary: var(--cssmall-shadow-normal) var(--cssmall-color-secondary);
 	--cssmall-shadow-secondary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-secondary);
+	--cssmall-shadow-tertiary: var(--cssmall-shadow-normal) var(--cssmall-color-tertiary);
+	--cssmall-shadow-tertiary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-tertiary);
 
     /* --- Neutral Colors --- */
 	--cssmall-shadow-neutral-lighterx: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-lighterx);
@@ -86,6 +90,10 @@
 	background-color: var(--cssmall-color-secondary);
 	color: var(--cssmall-color-text-on-secondary);
 }
+.color-tertiary {
+	background-color: var(--cssmall-color-tertiary);
+	color: var(--cssmall-color-text-on-tertiary);
+}
 .color-surface {
 	background-color: var(--cssmall-color-surface);
 	color: var(--cssmall-color-text-on-surface);
@@ -116,6 +124,7 @@
 /* Theme Colors */
 .shadow-primary {box-shadow: var(--cssmall-shadow-primary);}
 .shadow-secondary {box-shadow: var(--cssmall-shadow-secondary);}
+.shadow-tertiary {box-shadow: var(--cssmall-shadow-tertiary);}
 
 /* Neutral Colors */
 .shadow-neutral-lighterx {box-shadow: var(--cssmall-shadow-neutral-lighterx);}
@@ -137,6 +146,9 @@
 .shadow-secondary-btn {box-shadow: var(--cssmall-shadow-secondary);}
 .shadow-secondary-btn:hover,
 .shadow-secondary-btn:focus {box-shadow: var(--cssmall-shadow-secondary-pressed);}
+.shadow-tertiary-btn {box-shadow: var(--cssmall-shadow-tertiary);}
+.shadow-tertiary-btn:hover,
+.shadow-tertiary-btn:focus {box-shadow: var(--cssmall-shadow-tertiary-pressed);}
 
 /* Neutral Colors */
 .shadow-neutral-lighterx-btn {box-shadow: var(--cssmall-shadow-neutral-lighterx);}
