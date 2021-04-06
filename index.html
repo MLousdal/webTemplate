@@ -10,35 +10,42 @@
         <link rel="stylesheet" href="assets/css/cssmall.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/all.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
         <script src="assets/js/scripts.js" defer></script>
     </head>
     <body class="color-surface">
-        <nav class="color-primary">
-            <img src="assets/images/ml.png">
+        <nav>
+            <img src="assets/images/favicon-32x32.png" alt="logo" class="nav-logo">
             <ul id="nav-links">
-                <li><a href="#">LINK A</a></li>
+                <li><a href="#" class="active">LINK A</a></li>
                 <li><a href="#">LINK B</a></li>
                 <li><a href="#">LINK C</a></li>
                 <li><a href="#">LINK D</a></li>
             </ul>
-            <a href="javascript:void(0);" onclick="myFunction()" class="navBtn">
+            <ul class="nav-some">
+                <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <a href="javascript:void(0);" onclick="burgerToggle()" class="nav-btn">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
-        <div class="slidecontainer center-flex">
+        <div class="slide-container center-flex">
             <input type="range" min="1" max="100" value="50" class="slider color-neutral-lighterx" id="myRange">
-          </div>
-        <div class="toggle">
+        </div>
+        <div class="switch-container">
             <label class="switch">
-              <input type="checkbox" id="toggle">
-              <span class="toggler round"></span>
-            </label>
+                <input type="checkbox"/>
+                <span class="switch_toggle"></span>
+              </label>
         </div>
         <div class="center-flex">
-            <div class="color-secondary shadow-secondary-btn box">
+            <div class="color-secondary shadow-secondary box">
                 <h1>TEST</h1>
-                <p>Spicy jalapeno bacon ipsum dolor amet t-bone chicken biltong fatback cupim, flank chuck buffalo beef ribs ham hock pancetta beef prosciutto corned beef. Buffalo pig flank short ribs shankle hamburger.</p>
+                <a href="#" class="external-link">test</a>
+                <p>Spicy jalapeno bacon ipsum dolor amet <a href="#" class="external-link">test</a> t-bone chicken biltong fatback cupim, flank chuck buffalo beef ribs ham hock pancetta beef prosciutto corned beef. Buffalo pig flank short ribs shankle hamburger.</p>
             </div>
         </div>
+        <div><p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p></div>
     </body>
 </html>

@@ -31,10 +31,10 @@
 
     /* --- Neutral Colors --- */
 	--cssmall-color-neutral-white: hsl(0, 0%, 100%);
-	--cssmall-color-neutral-lighterx: hsl(0, 0%, 58%);
-	--cssmall-color-neutral-lighter: hsl(0, 0%, 38%);
-	--cssmall-color-neutral-light: hsl(0, 0%, 18%);
-	--cssmall-color-neutral-dark: hsl(0, 0%, 8%);
+	--cssmall-color-neutral-lighterx: hsl(0, 0%, 80%);
+	--cssmall-color-neutral-lighter: hsl(0, 0%, 60%);
+	--cssmall-color-neutral-light: hsl(0, 0%, 40%);
+	--cssmall-color-neutral-dark: hsl(0, 0%, 20%);
 
     /* --- Notification colors --- */
 	--cssmall-color-succes: hsl(87, 71%, 45%);

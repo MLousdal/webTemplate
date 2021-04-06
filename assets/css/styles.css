@@ -11,6 +11,11 @@
         3.4 Table
         3.5 Summary
         3.6 Misc. Positions
+    4. Components
+        4.1 Nav-bar
+        4.2 Grid
+        4.3 Switch
+        4.4 Slider
 */
 
 /*  
@@ -79,6 +84,28 @@ h5 {
 
 .bold {
   font-weight: 800;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+.external-link {
+  margin: 0 4px 0 2px;
+}
+
+.external-link::after {
+  content: "";
+  background-image: url(../images/foreign.svg);
+  background-size: cover;
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  left: 4px;
+  width: 1rem;
+  height: 1rem;
 }
 
 /*  
@@ -153,7 +180,7 @@ footer {
   margin: var(--cssmall-spacing-xl);
 }
 
-/* ----- Nav-bar ----- */
+/* ----- 4.1 Nav-bar ----- */
 
 nav {
   display: inline-flex;
@@ -171,27 +198,43 @@ nav li {
   display: inline-flex;
   justify-content: space-evenly;
   padding: var(--cssmall-spacing-s);
-  padding-right: 0;
 }
 
 nav a {
   text-decoration: none;
   color: inherit;
+  padding-bottom: 2px;
+  background: linear-gradient(var(--cssmall-color-primary),var(--cssmall-color-primary)) bottom;
+  background-size: 0% 2px;
+  background-repeat:no-repeat;
+  transition: all 0.45s;
 }
 
-nav li a:hover {
+nav a:hover,
+nav a:focus {
+  background-size: 50% 2px; /*width:100% height:2px*/
+  outline: none;
 }
 
 .active {
+  font-weight: 800;
 }
 
-.navBtn {
+.nav-btn {
   cursor: default;
   pointer-events: none;
   display: none;
 }
 
-/* ----- Grid ----- */
+.nav-logo {
+  padding-left: var(--cssmall-spacing-s);
+}
+
+.nav-some {
+  /* color: var(--cssmall-color-primary); */
+}
+
+/* ----- 4.2 Grid ----- */
 
 .grid-main {
   display: grid;
@@ -201,73 +244,104 @@ nav li a:hover {
   overflow: hidden;
 }
 
-/* ----- Toggle ----- */
+/* ----- 4.3 Switch ----- */
 
-.toggle {
+.switch-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.switch-container::after {
+  content: "Switch text here!";
+  position: relative;
+  left: var(--cssmall-spacing-s);
 }
 
 .switch {
+  display: inline-flex;
+  align-items: center;
+}
+
+.switch_toggle {
   position: relative;
-  display: inline-block;
-  width: 42px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.toggler {
-  position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--cssmall-color-neutral-lighterx);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
-.toggler:before {
+.switch [type=checkbox] {
   position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  opacity: 0;
+  pointer-events: none;
 }
 
-input:checked + .toggler {
-  background-color: var(--cssmall-color-primary);
+/* default states */
+
+.switch_toggle::before,
+.switch_toggle::after {
+  content: '';
+  display: block;
+  transition: all .2s ease-out;
+  background: var(--cssmall-color-neutral-lighter);
 }
 
-input:checked + .toggler:before {
-  -webkit-transform: translateX(18px);
-  -ms-transform: translateX(18px);
-  transform: translateX(18px);
+.switch_toggle::before {
+  height: 1.3em;
+  width: 3em;
+  border-radius: 0.65em;
+  opacity: 0.6;
 }
 
-/* Rounded togglers */
-.toggler.round {
-  border-radius: 34px;
-}
-
-.toggler.round:before {
+.switch_toggle::after {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(0, -50%);
+  height: .8em;
+  width: .8em;
   border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.4);
 }
 
-/* ----- Slider ----- */
+/* special states */
+.switch [type=checkbox]:hover+.switch_toggle:hover::before,
+.switch [type=checkbox]:hover+.switch_toggle:hover::after {
+  background-color: var(--cssmall-color-neutral-light);
+}
 
-.slidecontainer {
+.switch [type=checkbox]:focus+.switch_toggle::before, a:focus {
+  outline: var(--cssmall-color-neutral-dark) 1px solid;
+}
+
+.switch [type=checkbox]:disabled+.switch_toggle {
+  cursor: not-allowed;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.switch [type=checkbox]:disabled:hover+.switch_toggle:hover::before,
+.switch [type=checkbox]:disabled:hover+.switch_toggle:hover::after {
+  background-color: var(--cssmall-color-neutral-lighter);
+}
+
+.switch [type=checkbox]:disabled+.switch_toggle::after {
+  box-shadow: none;
+}
+
+/* checked states */
+
+.switch [type=checkbox]:checked+.switch_toggle::before,
+.switch [type=checkbox]:checked+.switch_toggle::after{
+  background-color: var(--cssmall-color-succes);
+}
+
+.switch [type=checkbox]:checked+.switch_toggle::after {
+  transform: translate(calc(2em - 100%), -50%);
+}
+
+/* ----- 4.4 Slider ----- */
+
+.slide-container {
   width: 100%;
   margin: var(--cssmall-spacing-s) 0;
-  grid-column: 1 / span 2;
 }
 
 .slider {
@@ -276,13 +350,13 @@ input:checked + .toggler:before {
   height: 8px;
   border-radius: 15px;
   outline: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  background-color: var(--cssmall-color-neutral-lighter);
+  transition: background-color 0.2s;
 }
 
 .slider:hover,
 .slider:focus {
-  opacity: 1;
+  background-color: var(--cssmall-color-neutral-light);
 }
 
 .slider::-webkit-slider-thumb {
@@ -312,7 +386,6 @@ input:checked + .toggler:before {
 .slider::-webkit-slider-runnable-track {
   height: 100%;
   border-radius: 50px;
-  background-color: var(--cssmall-color-neutral-lighter);
 }
 
 .slider::-moz-range-progress {
