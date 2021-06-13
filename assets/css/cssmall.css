@@ -1,176 +1,454 @@
 /*  
-    CSSmall by Mads Lousdal 2021
-    github.com/MLousdal
+    webTemplate by Mads Lousdal 2021
+    github.com/MLousdal/webTemplate
 */
 
 :root {
-    /* ----- Spacing variables */
-    --cssmall-spacing: 1rem; /* Base spacing */
-    --cssmall-spacing-multiplier-m: 2; 
-    --cssmall-spacing-multiplier-l: 3; 
-    --cssmall-spacing-multiplier-xl: 4;
-
-    /* Spacing translation */
-    /* For use insert fx. ´var(--cssmall-spacing-s)´ into the wanted property */
-    --cssmall-spacing-s: var(--cssmall-spacing);
-    --cssmall-spacing-m: calc(var(--cssmall-spacing) * var(--cssmall-spacing-multiplier-m));
-    --cssmall-spacing-l: calc(var(--cssmall-spacing) * var(--cssmall-spacing-multiplier-l));
-    --cssmall-spacing-xl: calc(var(--cssmall-spacing) * var(--cssmall-spacing-multiplier-xl));
-    
-    /* ----- Colors ----- */
-
-    /* --- Theme Colors --- */
-    --cssmall-color-primary: hsl(47, 100%, 50%);
-	--cssmall-color-secondary: hsl(227, 100%, 50%);
-	--cssmall-color-tertiary: hsl(287, 100%, 50%);
-    --cssmall-color-surface: hsl(47, 100%, 98%);
-
-     /* Text colors for theme */
-	--cssmall-color-text-on-primary: hsl(47, 100%, 10%);
-	--cssmall-color-text-on-secondary: hsl(47, 100%, 99%);
-	--cssmall-color-text-on-tertiary: hsl(47, 100%, 10%);
-	--cssmall-color-text-on-surface: hsl(47, 100%, 10%);
-
-    /* --- Neutral Colors --- */
-	--cssmall-color-neutral-white: hsl(0, 0%, 100%);
-	--cssmall-color-neutral-lighterx: hsl(0, 0%, 80%);
-	--cssmall-color-neutral-lighter: hsl(0, 0%, 60%);
-	--cssmall-color-neutral-light: hsl(0, 0%, 40%);
-	--cssmall-color-neutral-dark: hsl(0, 0%, 20%);
-
-    /* --- Notification colors --- */
-	--cssmall-color-succes: hsl(87, 78%, 55%);
-	--cssmall-color-warning: hsl(47, 78%, 55%);
-	--cssmall-color-error: hsl(7, 78%, 55%);
-
-    /* Text colors for notifications */
-    --cssmall-color-text-on-succes: hsl(47, 100%, 10%);
-	--cssmall-color-text-on-warning: hsl(47, 100%, 10%);
-	--cssmall-color-text-on-error: hsl(47, 100%, 99%);
-
-    /* ----- Shadows ----- */
-    --cssmall-shadow-normal: 10px 10px 40px;
-    --cssmall-shadow-btn: 3px 3px 20px;
-
-    /* --- Theme Colors --- */
-	--cssmall-shadow-primary: var(--cssmall-shadow-normal) var(--cssmall-color-primary);
-	--cssmall-shadow-primary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-primary);
-	--cssmall-shadow-secondary: var(--cssmall-shadow-normal) var(--cssmall-color-secondary);
-	--cssmall-shadow-secondary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-secondary);
-	--cssmall-shadow-tertiary: var(--cssmall-shadow-normal) var(--cssmall-color-tertiary);
-	--cssmall-shadow-tertiary-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-tertiary);
-
-    /* --- Neutral Colors --- */
-	--cssmall-shadow-neutral-lighterx: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-lighterx);
-	--cssmall-shadow-neutral-lighterx-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-lighterx);
-	--cssmall-shadow-neutral-lighter: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-lighter);
-	--cssmall-shadow-neutral-lighter-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-lighter);
-	--cssmall-shadow-neutral-light: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-light);
-	--cssmall-shadow-neutral-light-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-light);
-	--cssmall-shadow-neutral-dark: var(--cssmall-shadow-normal) var(--cssmall-color-neutral-dark);
-	--cssmall-shadow-neutral-dark-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-neutral-dark);
-
-    /* --- Notification colors --- */
-    --cssmall-shadow-succes: var(--cssmall-shadow-normal) var(--cssmall-color-succes);
-	--cssmall-shadow-succes-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-succes);
-    --cssmall-shadow-warning: var(--cssmall-shadow-normal) var(--cssmall-color-warning);
-	--cssmall-shadow-warning-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-warning);
-    --cssmall-shadow-error: var(--cssmall-shadow-normal) var(--cssmall-color-error);
-	--cssmall-shadow-error-pressed: var(--cssmall-shadow-btn) var(--cssmall-color-error);
-}
-
-/* ----- Classes ----- */
-
-/* Theme Colors */
-.color-primary {
-	background-color: var(--cssmall-color-primary);
-	color: var(--cssmall-color-text-on-primary);
-}
-.color-secondary {
-	background-color: var(--cssmall-color-secondary);
-	color: var(--cssmall-color-text-on-secondary);
-}
-.color-tertiary {
-	background-color: var(--cssmall-color-tertiary);
-	color: var(--cssmall-color-text-on-tertiary);
-}
-.color-surface {
-	background-color: var(--cssmall-color-surface);
-	color: var(--cssmall-color-text-on-surface);
-}
-
-/* Neutral Colors */
-.color-neutral-white {background-color: var(--cssmall-color-neutral-white);}
-.color-neutral-lighterx {background-color: var(--cssmall-color-neutral-lighterx);}
-.color-neutral-lighter {background-color: var(--cssmall-color-neutral-lighter);}
-.color-neutral-light {background-color: var(--cssmall-color-neutral-light);}
-.color-neutral-dark {background-color: var(--cssmall-color-neutral-dark);}
-
-/* Notification colors */
-.color-succes {
-    background-color: var(--cssmall-color-succes);
-	color: var(--cssmall-color-text-on-succes);
-}
-.color-warning {
-    background-color: var(--cssmall-color-warning);
-	color: var(--cssmall-color-text-on-warning);
-}
-.color-error {
-    background-color: var(--cssmall-color-error);
-	color: var(--cssmall-color-text-on-error);
-}
-
-/* --- shadows --- */
-/* Theme Colors */
-.shadow-primary {box-shadow: var(--cssmall-shadow-primary);}
-.shadow-secondary {box-shadow: var(--cssmall-shadow-secondary);}
-.shadow-tertiary {box-shadow: var(--cssmall-shadow-tertiary);}
-
-/* Neutral Colors */
-.shadow-neutral-lighterx {box-shadow: var(--cssmall-shadow-neutral-lighterx);}
-.shadow-neutral-lighter {box-shadow: var(--cssmall-shadow-neutral-lighter);}
-.shadow-neutral-light {box-shadow: var(--cssmall-shadow-neutral-light);}
-.shadow-neutral-dark {box-shadow: var(--cssmall-shadow-neutral-dark);}
-
-/* Notification colors */
-.shadow-succes {box-shadow: var(--cssmall-shadow-succes);}
-.shadow-warning {box-shadow: var(--cssmall-shadow-warning);}
-.shadow-error {box-shadow: var(--cssmall-shadow-error);}
-
-
-/* --- Button shadows --- */
-/* Theme Colors */
-.shadow-primary-btn {box-shadow: var(--cssmall-shadow-primary);}
-.shadow-primary-btn:hover,
-.shadow-primary-btn:focus {box-shadow: var(--cssmall-shadow-primary-pressed);}
-.shadow-secondary-btn {box-shadow: var(--cssmall-shadow-secondary);}
-.shadow-secondary-btn:hover,
-.shadow-secondary-btn:focus {box-shadow: var(--cssmall-shadow-secondary-pressed);}
-.shadow-tertiary-btn {box-shadow: var(--cssmall-shadow-tertiary);}
-.shadow-tertiary-btn:hover,
-.shadow-tertiary-btn:focus {box-shadow: var(--cssmall-shadow-tertiary-pressed);}
-
-/* Neutral Colors */
-.shadow-neutral-lighterx-btn {box-shadow: var(--cssmall-shadow-neutral-lighterx);}
-.shadow-neutral-lighterx-btn:hover,
-.shadow-neutral-lighterx-btn:focus {box-shadow: var(--cssmall-shadow-neutral-lighterx-pressed);}
-.shadow-neutral-lighter-btn {box-shadow: var(--cssmall-shadow-neutral-lighter);}
-.shadow-neutral-lighter-btn:hover,
-.shadow-neutral-lighter-btn:focus {box-shadow: var(--cssmall-shadow-neutral-lighter-pressed);}
-.shadow-neutral-light-btn {box-shadow: var(--cssmall-shadow-neutral-light);}
-.shadow-neutral-light-btn:hover,
-.shadow-neutral-light-btn:focus {box-shadow: var(--cssmall-shadow-neutral-light-pressed);}
-.shadow-neutral-dark-btn {box-shadow: var(--cssmall-shadow-neutral-dark);}
-.shadow-neutral-dark-btn:hover,
-.shadow-neutral-dark-btn:focus {box-shadow: var(--cssmall-shadow-neutral-dark-pressed);}
-
-/* Notification colors */
-.shadow-succes-btn {box-shadow: var(--cssmall-shadow-succes);}
-.shadow-succes-btn:hover,
-.shadow-succes-btn:focus {box-shadow: var(--cssmall-shadow-succes-pressed);}
-.shadow-warning-btn {box-shadow: var(--cssmall-shadow-warning);}
-.shadow-warning-btn:hover,
-.shadow-warning-btn:focus {box-shadow: var(--cssmall-shadow-warning-pressed);}
-.shadow-error-btn {box-shadow: var(--cssmall-shadow-error);}
-.shadow-error-btn:hover,
-.shadow-error-btn:focus {box-shadow: var(--cssmall-shadow-error-pressed);}
+	/* ----- Spacing variables */
+	--spacing: 1rem; /* Base spacing */
+	--spacing-multiplier-xs: 0.5;
+	--spacing-multiplier-m: 2;
+	--spacing-multiplier-l: 3;
+	--spacing-multiplier-xl: 4;
+  
+	/* Spacing translation */
+	/* For use insert fx. ´var(--spacing-s)´ into the wanted property */
+	--spacing-s: var(--spacing);
+	--spacing-xs: calc(
+	  var(--spacing) * var(--spacing-multiplier-xs)
+	);
+	--spacing-m: calc(
+	  var(--spacing) * var(--spacing-multiplier-m)
+	);
+	--spacing-l: calc(
+	  var(--spacing) * var(--spacing-multiplier-l)
+	);
+	--spacing-xl: calc(
+	  var(--spacing) * var(--spacing-multiplier-xl)
+	);
+  
+	/* ----- Border variables */
+	--border-radius: 10px;
+  
+	/* ----- Colors ----- */
+  
+	/* --- Theme Colors --- */
+	--color-primary: rgb(65, 124, 169);
+	--color-primary-accent: rgba(65, 124, 169, 0.2);
+	--color-secondary: rgb(250, 152, 5);
+	--color-secondary-accent: rgba(250, 152, 5, 0.2);
+	--color-dark: rgba(25, 31, 39, 1);
+  
+	/* Text colors for theme */
+	--color-text-on-primary: rgb(255, 255, 255);
+	--color-text-on-secondary: rgb(0, 0, 0);
+	--color-text-on-dark: rgb(255, 255, 255);
+  
+	/* --- Neutral Colors --- */
+	--color-neutral-white: hsl(0, 0%, 100%);
+	--color-neutral-lighterxx: rgba(237, 235, 228, 0.2);
+	--color-neutral-lighterx: hsl(0, 0%, 80%);
+	--color-neutral-lighter: hsl(0, 0%, 60%);
+	--color-neutral-light: hsl(0, 0%, 40%);
+	--color-neutral-dark: hsl(0, 0%, 20%);
+  
+	/* --- Notification colors --- */
+	--color-succes: hsl(87, 78%, 55%);
+	--color-warning: hsl(47, 78%, 55%);
+	--color-error: hsl(7, 78%, 55%);
+  
+	/* Text colors for notifications */
+	--color-text-on-succes: rgb(0, 0, 0);
+	--color-text-on-warning: rgb(0, 0, 0);
+	--color-text-on-error: rgb(255, 255, 255);
+  
+	/* ----- Shadows ----- */
+	--shadow-normal: 0px 6px 6px;
+	--shadow-btn: 0px 0px 18px;
+  
+	/* --- Theme Colors --- */
+	--shadow-primary: var(--shadow-normal) var(--color-primary-accent);
+	--shadow-primary-pressed: var(--shadow-btn) var(--color-primary);
+	--shadow-secondary: var(--shadow-normal) var(--color-secondary);
+	--shadow-secondary-pressed: var(--shadow-btn) var(--color-secondary);
+  
+	/* --- Neutral Colors --- */
+	--shadow-neutral-lighterx: var(--shadow-normal) var(--color-neutral-lighterx);
+	--shadow-neutral-lighterx-pressed: var(--shadow-btn) var(--color-neutral-lighterx);
+	--shadow-neutral-lighter: var(--shadow-normal) var(--color-neutral-lighter);
+	--shadow-neutral-lighter-pressed: var(--shadow-btn) var(--color-neutral-lighter);
+	--shadow-neutral-light: var(--shadow-normal) var(--color-neutral-light);
+	--shadow-neutral-light-pressed: var(--shadow-btn) var(--color-neutral-light);
+	--shadow-neutral-dark: var(--shadow-normal) var(--color-neutral-dark);
+	--shadow-neutral-dark-pressed: var(--shadow-btn) var(--color-neutral-dark);
+  
+	/* --- Notification colors --- */
+	--shadow-succes: var(--shadow-normal) var(--color-succes);
+	--shadow-succes-pressed: var(--shadow-btn) var(--color-succes);
+	--shadow-warning: var(--shadow-normal) var(--color-warning);
+	--shadow-warning-pressed: var(--shadow-btn) var(--color-warning);
+	--shadow-error: var(--shadow-normal) var(--color-error);
+	--shadow-error-pressed: var(--shadow-btn) var(--color-error);
+  }
+  
+  /* ----- Classes ----- */
+  
+  .border-radius {
+	border-radius: var(--border-radius);
+  }
+  
+  /* Paddings */
+  
+  .padding-xs {
+	padding: var(--spacing-xs);
+  }
+  .padding-xs-top {
+	padding-top: var(--spacing-xs);
+  }
+  .padding-xs-right {
+	padding-right: var(--spacing-xs);
+  }
+  .padding-xs-bottom {
+	padding-bottom: var(--spacing-xs);
+  }
+  .padding-xs-left {
+	padding-left: var(--spacing-xs);
+  }
+  
+  .padding-s {
+	padding: var(--spacing-s);
+  }
+  .padding-s-top {
+	padding-top: var(--spacing-s);
+  }
+  .padding-s-right {
+	padding-right: var(--spacing-s);
+  }
+  .padding-s-bottom {
+	padding-bottom: var(--spacing-s);
+  }
+  .padding-s-left {
+	padding-left: var(--spacing-s);
+  }
+  
+  .padding-m {
+	padding: var(--spacing-m);
+  }
+  .padding-m-top {
+	padding-top: var(--spacing-m);
+  }
+  .padding-m-right {
+	padding-right: var(--spacing-m);
+  }
+  .padding-m-bottom {
+	padding-bottom: var(--spacing-m);
+  }
+  .padding-m-left {
+	padding-left: var(--spacing-m);
+  }
+  
+  .padding-l {
+	padding: var(--spacing-l);
+  }
+  .padding-l-top {
+	padding-top: var(--spacing-l);
+  }
+  .padding-l-right {
+	padding-right: var(--spacing-l);
+  }
+  .padding-l-bottom {
+	padding-bottom: var(--spacing-l);
+  }
+  .padding-l-left {
+	padding-left: var(--spacing-l);
+  }
+  
+  .padding-xl {
+	padding: var(--spacing-xl);
+  }
+  .padding-xl-top {
+	padding-top: var(--spacing-xl);
+  }
+  .padding-xl-right {
+	padding-right: var(--spacing-xl);
+  }
+  .padding-xl-bottom {
+	padding-bottom: var(--spacing-xl);
+  }
+  .padding-xl-left {
+	padding-left: var(--spacing-xl);
+  }
+  
+  /* Margins */
+  
+  .margin-xs {
+	margin: var(--spacing-xs);
+  }
+  .margin-xs-top {
+	margin-top: var(--spacing-xs);
+  }
+  .margin-xs-right {
+	margin-right: var(--spacing-xs);
+  }
+  .margin-xs-bottom {
+	margin-bottom: var(--spacing-xs);
+  }
+  .margin-xs-left {
+	margin-left: var(--spacing-xs);
+  }
+  .margin-s {
+	margin: var(--spacing-s);
+  }
+  .margin-s-top {
+	margin-top: var(--spacing-s);
+  }
+  .margin-s-right {
+	margin-right: var(--spacing-s);
+  }
+  .margin-s-bottom {
+	margin-bottom: var(--spacing-s);
+  }
+  .margin-s-left {
+	margin-left: var(--spacing-s);
+  }
+  .margin-m {
+	margin: var(--spacing-m);
+  }
+  .margin-m-top {
+	margin-top: var(--spacing-m);
+  }
+  .margin-m-right {
+	margin-right: var(--spacing-m);
+  }
+  .margin-m-bottom {
+	margin-bottom: var(--spacing-m);
+  }
+  .margin-m-left {
+	margin-left: var(--spacing-m);
+  }
+  .margin-l {
+	margin: var(--spacing-l);
+  }
+  .margin-l-top {
+	margin-top: var(--spacing-l);
+  }
+  .margin-l-right {
+	margin-right: var(--spacing-l);
+  }
+  .margin-l-bottom {
+	margin-bottom: var(--spacing-l);
+  }
+  .margin-l-left {
+	margin-left: var(--spacing-l);
+  }
+  .margin-xl {
+	margin: var(--spacing-xl);
+  }
+  .margin-xl-top {
+	margin-top: var(--spacing-xl);
+  }
+  .margin-xl-right {
+	margin-right: var(--spacing-xl);
+  }
+  .margin-xl-bottom {
+	margin-bottom: var(--spacing-xl);
+  }
+  .margin-xl-left {
+	margin-left: var(--spacing-xl);
+  }
+  
+  /* Theme Colors */
+  .color-primary {
+	background-color: var(--color-primary);
+	color: var(--color-text-on-primary);
+  }
+  .color-primary-accent {
+	background-color: var(--color-primary-accent);
+	color: var(--color-text-on-secondary);
+  }
+  .text-primary {
+	color: var(--color-primary);
+  }
+  .color-secondary {
+	background-color: var(--color-secondary);
+	color: var(--color-text-on-secondary);
+  }
+  .color-secondary-accent {
+	background-color: var(--color-secondary-accent);
+	color: var(--color-text-on-secondary);
+  }
+  .text-secondary {
+	color: var(--color-secondary);
+  }
+  .color-dark {
+	background-color: var(--color-dark);
+	color: var(--color-text-on-dark);
+  }
+  .text-dark {
+	color: var(--color-text-on-secondary);
+  }
+  
+  /* Neutral Colors */
+  .color-neutral-white {
+	background-color: var(--color-neutral-white);
+  }
+  .text-neutral-white {
+	color: var(--color-neutral-white);
+  }
+  .color-neutral-lighterxx {
+	background-color: var(--color-neutral-lighterxx);
+  }
+  .text-neutral-lighterxx {
+	color: var(--color-neutral-lighterxx);
+  }
+  .color-neutral-lighterx {
+	background-color: var(--color-neutral-lighterx);
+  }
+  .text-neutral-lighterx {
+	color: var(--color-neutral-lighterx);
+  }
+  .color-neutral-lighter {
+	background-color: var(--color-neutral-lighter);
+  }
+  .text-neutral-lighter {
+	color: var(--color-neutral-lighter);
+  }
+  .color-neutral-light {
+	background-color: var(--color-neutral-light);
+  }
+  .text-neutral-light {
+	color: var(--color-neutral-light);
+  }
+  .color-neutral-dark {
+	background-color: var(--color-neutral-dark);
+  }
+  .text-neutral-dark {
+	color: var(--color-neutral-dark);
+  }
+  
+  /* Notification colors */
+  .color-succes {
+	background-color: var(--color-succes);
+	color: var(--color-text-on-succes);
+  }
+  .text-succes {
+	color: var(--color-succes);
+  }
+  .color-warning {
+	background-color: var(--color-warning);
+	color: var(--color-text-on-warning);
+  }
+  .text-warning {
+	color: var(--color-warning);
+  }
+  .color-error {
+	background-color: var(--color-error);
+	color: var(--color-text-on-error);
+  }
+  .text-error {
+	color: var(--color-error);
+  }
+  
+  /* --- shadows --- */
+  /* Theme Colors */
+  .shadow-primary {
+	box-shadow: var(--shadow-primary);
+  }
+  .shadow-secondary {
+	box-shadow: var(--shadow-secondary);
+  }
+  
+  /* Neutral Colors */
+  .shadow-neutral-lighterx {
+	box-shadow: var(--shadow-neutral-lighterx);
+  }
+  .shadow-neutral-lighter {
+	box-shadow: var(--shadow-neutral-lighter);
+  }
+  .shadow-neutral-light {
+	box-shadow: var(--shadow-neutral-light);
+  }
+  .shadow-neutral-dark {
+	box-shadow: var(--shadow-neutral-dark);
+  }
+  
+  /* Notification colors */
+  .shadow-succes {
+	box-shadow: var(--shadow-succes);
+  }
+  .shadow-warning {
+	box-shadow: var(--shadow-warning);
+  }
+  .shadow-error {
+	box-shadow: var(--shadow-error);
+  }
+  
+  /* --- Button shadows --- */
+  /* Theme Colors */
+  .shadow-primary-btn {
+	box-shadow: var(--shadow-primary);
+  }
+  .shadow-primary-btn:hover,
+  .shadow-primary-btn:focus {
+	box-shadow: var(--shadow-primary-pressed);
+  }
+  .shadow-secondary-btn {
+	box-shadow: var(--shadow-secondary);
+  }
+  .shadow-secondary-btn:hover,
+  .shadow-secondary-btn:focus {
+	box-shadow: var(--shadow-secondary-pressed);
+  }
+  
+  /* Neutral Colors */
+  .shadow-neutral-lighterx-btn {
+	box-shadow: var(--shadow-neutral-lighterx);
+  }
+  .shadow-neutral-lighterx-btn:hover,
+  .shadow-neutral-lighterx-btn:focus {
+	box-shadow: var(--shadow-neutral-lighterx-pressed);
+  }
+  .shadow-neutral-lighter-btn {
+	box-shadow: var(--shadow-neutral-lighter);
+  }
+  .shadow-neutral-lighter-btn:hover,
+  .shadow-neutral-lighter-btn:focus {
+	box-shadow: var(--shadow-neutral-lighter-pressed);
+  }
+  .shadow-neutral-light-btn {
+	box-shadow: var(--shadow-neutral-light);
+  }
+  .shadow-neutral-light-btn:hover,
+  .shadow-neutral-light-btn:focus {
+	box-shadow: var(--shadow-neutral-light-pressed);
+  }
+  .shadow-neutral-dark-btn {
+	box-shadow: var(--shadow-neutral-dark);
+  }
+  .shadow-neutral-dark-btn:hover,
+  .shadow-neutral-dark-btn:focus {
+	box-shadow: var(--shadow-neutral-dark-pressed);
+  }
+  
+  /* Notification colors */
+  .shadow-succes-btn {
+	box-shadow: var(--shadow-succes);
+  }
+  .shadow-succes-btn:hover,
+  .shadow-succes-btn:focus {
+	box-shadow: var(--shadow-succes-pressed);
+  }
+  .shadow-warning-btn {
+	box-shadow: var(--shadow-warning);
+  }
+  .shadow-warning-btn:hover,
+  .shadow-warning-btn:focus {
+	box-shadow: var(--shadow-warning-pressed);
+  }
+  .shadow-error-btn {
+	box-shadow: var(--shadow-error);
+  }
+  .shadow-error-btn:hover,
+  .shadow-error-btn:focus {
+	box-shadow: var(--shadow-error-pressed);
+  }
