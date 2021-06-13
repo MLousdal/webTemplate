@@ -14,18 +14,10 @@
 	/* Spacing translation */
 	/* For use insert fx. ´var(--spacing-s)´ into the wanted property */
 	--spacing-s: var(--spacing);
-	--spacing-xs: calc(
-	  var(--spacing) * var(--spacing-multiplier-xs)
-	);
-	--spacing-m: calc(
-	  var(--spacing) * var(--spacing-multiplier-m)
-	);
-	--spacing-l: calc(
-	  var(--spacing) * var(--spacing-multiplier-l)
-	);
-	--spacing-xl: calc(
-	  var(--spacing) * var(--spacing-multiplier-xl)
-	);
+	--spacing-xs: calc(var(--spacing) * var(--spacing-multiplier-xs));
+	--spacing-m: calc(var(--spacing) * var(--spacing-multiplier-m));
+	--spacing-l: calc(var(--spacing) * var(--spacing-multiplier-l));
+	--spacing-xl: calc(var(--spacing) * var(--spacing-multiplier-xl));
   
 	/* ----- Border variables */
 	--border-radius: 10px;
@@ -46,7 +38,7 @@
   
 	/* --- Neutral Colors --- */
 	--color-neutral-white: hsl(0, 0%, 100%);
-	--color-neutral-lighterxx: rgba(237, 235, 228, 0.2);
+	--color-neutral-lighterxx: hsl(0, 0%, 90%);
 	--color-neutral-lighterx: hsl(0, 0%, 80%);
 	--color-neutral-lighter: hsl(0, 0%, 60%);
 	--color-neutral-light: hsl(0, 0%, 40%);

@@ -7,39 +7,24 @@
         <meta name="description" content="WRITE A DESCRIPTION HERE!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="assets/css/cssmall.css">
+        <link rel="stylesheet" href="assets/css/webTemplate.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/all.css">
         <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
         <script src="assets/js/scripts.js" defer></script>
     </head>
-    <body class="color-surface">
+    <body class="color-primary-accent">
         <nav>
             <img src="assets/images/favicon-32x32.png" alt="logo" class="nav-logo">
             <ul id="nav-links">
-                <li><a href="#" class="active">LINK A</a></li>
-                <li><a href="#">LINK B</a></li>
-                <li><a href="#">LINK C</a></li>
-                <li><a href="#">LINK D</a></li>
+                <li><a href="#" class="active underline">LINK A</a></li>
+                <li><a href="#" class="underline">LINK B</a></li>
+                <li><a href="#" class="underline">LINK C</a></li>
+                <li><a href="#" class="underline">LINK D</a></li>
             </ul>
-            <ul class="nav-some">
-                <li><a href="#"><i class="fab fa-github-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-            <a href="javascript:void(0);" onclick="burgerToggle()" class="nav-btn">
-                <i class="fa fa-bars"></i>
-            </a>
+            <a href="javascript:void(0);" onclick="burgerToggle()" class="nav-btn" aria-label="menu"><img src="assets/images/icons/bars-solid.svg" alt=""></a>
         </nav>
-        <div class="slide-container center-flex">
-            <input type="range" min="1" max="100" value="50" class="slider color-neutral-lighterx" id="myRange">
-        </div>
-        <div class="switch-container">
-            <label class="switch">
-                <input type="checkbox"/>
-                <span class="switch_toggle"></span>
-              </label>
-        </div>
-        <div class="center-flex">
+        <section class="wrapper">
             <div class="color-neutral-white shadow-neutral-lighterx box">
                 <h1>Heading 1</h1>
                 <h1 class="semi-bold">Heading 1</h1>
@@ -64,10 +49,39 @@
                 <p>Spicy jalapeno bacon ipsum dolor amet <a href="#" class="external-link">test</a> t-bone chicken biltong fatback cupim, flank chuck buffalo beef ribs ham hock pancetta beef prosciutto corned beef. Buffalo pig flank short ribs shankle hamburger.</p>
                 <p class="semi-bold">Semi-bold</p>
                 <p class="bold">Bold</p>
-                <br />
-
             </div>
-        </div>
-        <div><p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p></div>
+        </section>
+        <hr class="hr-text" data-content=""></hr>
+        <section class="wrapper">
+            <div class="color-neutral-white shadow-neutral-lighterx box center-flex column-flex align-start">
+                <div class="slide-container">
+                    <input type="range" min="1" max="100" value="50" class="slider color-neutral-lighterx" id="myRange">
+                </div>
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox"/>
+                        <span class="switch_toggle"></span>
+                      </label>
+                </div>
+            </div>
+        </section>
+        <hr class="hr-text" data-content=""></hr>
+        <section class="wrapper">
+            <div class="center-flex wrap-flex gap-flex color-neutral-white shadow-neutral-lighterx box">
+                <input class="kontakt-type" type="radio" name="tools" id="type-1">
+                <label class="for-kontakt-type center-flex column-flex center-text shadow-neutral-lighterx-btn" for="type-1">
+                    <img src="assets/images/icons/carbon_user.svg" class="icon icon-white" alt="">Medlem</label>
+                <input class="kontakt-type" type="radio" name="tools" id="type-2">
+                <label class="for-kontakt-type center-flex column-flex center-text shadow-neutral-lighterx-btn" for="type-2">
+                    <img src="assets/images/icons/carbon_collaborate.svg" class="icon icon-white" alt="">Partner</label>
+                <input class="kontakt-type" type="radio" name="tools" id="type-3">
+                <label class="for-kontakt-type center-flex column-flex center-text shadow-neutral-lighterx-btn" for="type-3">
+                    <img src="assets/images/icons/carbon_building.svg" class="icon icon-white" alt="">virksomhed</label>
+                <input class="kontakt-type" type="radio" name="tools" id="type-4">
+                <label class="for-kontakt-type center-flex column-flex center-text shadow-neutral-lighterx-btn" for="type-4">
+                    <img src="assets/images/icons/carbon_group-presentation.svg" class="icon icon-white" alt="">Andet</label>
+            </div>
+    </section>
+        <button onclick="topFunction()" id="toTopBtn" title="Go to top" class="scale"><img src="assets/images/icons/arrow-up-solid.svg" alt=""></button>
     </body>
 </html>
