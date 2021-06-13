@@ -371,7 +371,6 @@ nav a {
   font-weight: 400;
   text-decoration: none;
   color: inherit;
-  padding: var(--spacing-xs);
   border-radius: var(--border-radius);
 }
 
