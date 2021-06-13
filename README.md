@@ -1,2 +1,2 @@
-# CSSmall
-CSSmall is a vanilla css framework that supplies me with the variables, and structure I need for starting a new project!
+# webTemplate
+webTemplate is a template for websites that supply me with the variables, and classes I need to start a new project!
