@@ -168,10 +168,10 @@ footer {
 */
 
 .box {
-  width: 400px;
-  /* height: 400px; */
-  padding: var(--cssmall-spacing-s);
-  margin: var(--cssmall-spacing-xl);
+  width: 100%;
+  max-width: 1200px;
+  padding: var(--spacing-s);
+  margin: var(--spacing-xl);
 }
 
 /* ----- 4.1 Nav-bar ----- */
@@ -191,7 +191,7 @@ nav ul {
 nav li {
   display: inline-flex;
   justify-content: space-evenly;
-  padding: var(--cssmall-spacing-s);
+  padding: var(--spacing-s);
 }
 
 nav a {
@@ -199,7 +199,7 @@ nav a {
   text-decoration: none;
   color: inherit;
   padding-bottom: 2px;
-  background: linear-gradient(var(--cssmall-color-primary),var(--cssmall-color-primary)) bottom;
+  background: linear-gradient(var(--color-primary),var(--color-primary)) bottom;
   background-size: 0% 2px;
   background-repeat:no-repeat;
   transition: all 0.45s;
@@ -222,11 +222,11 @@ nav a:focus {
 }
 
 .nav-logo {
-  padding-left: var(--cssmall-spacing-s);
+  padding-left: var(--spacing-s);
 }
 
 .nav-some {
-  /* color: var(--cssmall-color-primary); */
+  /* color: var(--color-primary); */
 }
 
 /* ----- 4.2 Grid ----- */
@@ -235,7 +235,7 @@ nav a:focus {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: var(--cssmall-spacing-s);
+  gap: var(--spacing-s);
   overflow: hidden;
 }
 
@@ -249,7 +249,7 @@ nav a:focus {
 .switch-container::after {
   content: "Switch text here!";
   position: relative;
-  left: var(--cssmall-spacing-s);
+  left: var(--spacing-s);
 }
 
 .switch {
@@ -275,7 +275,7 @@ nav a:focus {
   content: '';
   display: block;
   transition: all .2s ease-out;
-  background: var(--cssmall-color-neutral-lighter);
+  background: var(--color-neutral-lighter);
 }
 
 .switch_toggle::before {
@@ -299,11 +299,11 @@ nav a:focus {
 /* special states */
 .switch [type=checkbox]:hover+.switch_toggle:hover::before,
 .switch [type=checkbox]:hover+.switch_toggle:hover::after {
-  background-color: var(--cssmall-color-neutral-light);
+  background-color: var(--color-neutral-light);
 }
 
 .switch [type=checkbox]:focus+.switch_toggle::before, a:focus {
-  outline: var(--cssmall-color-neutral-dark) 1px solid;
+  outline: var(--color-neutral-dark) 1px solid;
 }
 
 .switch [type=checkbox]:disabled+.switch_toggle {
@@ -314,7 +314,7 @@ nav a:focus {
 
 .switch [type=checkbox]:disabled:hover+.switch_toggle:hover::before,
 .switch [type=checkbox]:disabled:hover+.switch_toggle:hover::after {
-  background-color: var(--cssmall-color-neutral-lighter);
+  background-color: var(--color-neutral-lighter);
 }
 
 .switch [type=checkbox]:disabled+.switch_toggle::after {
@@ -325,7 +325,7 @@ nav a:focus {
 
 .switch [type=checkbox]:checked+.switch_toggle::before,
 .switch [type=checkbox]:checked+.switch_toggle::after{
-  background-color: var(--cssmall-color-succes);
+  background-color: var(--color-succes);
 }
 
 .switch [type=checkbox]:checked+.switch_toggle::after {
@@ -336,7 +336,7 @@ nav a:focus {
 
 .slide-container {
   width: 100%;
-  margin: var(--cssmall-spacing-s) 0;
+  margin: var(--spacing-s) 0;
 }
 
 .slider {
@@ -345,13 +345,13 @@ nav a:focus {
   height: 8px;
   border-radius: 15px;
   outline: none;
-  background-color: var(--cssmall-color-neutral-lighter);
+  background-color: var(--color-neutral-lighter);
   transition: background-color 0.2s;
 }
 
 .slider:hover,
 .slider:focus {
-  background-color: var(--cssmall-color-neutral-light);
+  background-color: var(--color-neutral-light);
 }
 
 .slider::-webkit-slider-thumb {
@@ -360,8 +360,8 @@ nav a:focus {
   height: 28px;
   border: 0;
   border-radius: 50px;
-  background-color: var(--cssmall-color-primary);
-  box-shadow: 0px 0px 15px var(--cssmall-color-primary);
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 15px var(--color-primary);
   cursor: pointer;
   position: relative;
   top: -10px;
@@ -373,8 +373,8 @@ nav a:focus {
   height: 28px;
   border: 0;
   border-radius: 50px;
-  background-color: var(--cssmall-color-primary);
-  box-shadow: 0px 0px 15px var(--cssmall-color-primary);
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 15px var(--color-primary);
   cursor: pointer;
 }
 
@@ -386,7 +386,7 @@ nav a:focus {
 .slider::-moz-range-progress {
   height: 100%;
   border-radius: inherit;
-  background-color: var(--cssmall-color-primary);
+  background-color: var(--color-primary);
 }
 
 /* ----- Icons ----- */
