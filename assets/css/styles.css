@@ -2,19 +2,20 @@
 
 /*  Table of contents:
 
+    0. Themes
     1. Global styles
     2. Typography
     3. Layout
-        3.1 Header
-        3.2 Section
-        3.3 Article
-        3.4 Form
-        3.5 Table
-        3.6 Summary
-        3.7 Footer
-        3.8 Picture
-        3.9 Break line
-        3.10 Misc. Positions
+        3.1 Misc. Positions
+        3.2 Header
+        3.3 Section
+        3.4 Article
+        3.5 Form
+        3.6 Table
+        3.7 Summary
+        3.8 Footer
+        3.9 Picture
+        3.10 Break line
     4. Components
         4.1 Nav-bar
         4.2 Grid
@@ -23,9 +24,38 @@
         4.5 CTA
         4.6 To top button
         4.7 Fancy radio btns
-        4.8 Icons
+        4.8 Checkbox
+        4.9 Icons
     5. Media quries
 */
+
+/*  
+    ================
+    0. Themes
+    ================
+*/
+
+.theme-light {
+  --font-color: hsl(0, 0%, 0%);
+  --font-color-disabled: hsl(0, 0%, 25%);
+  --background-color: var(--color-primary-accent);
+  --foreground-color: hsl(0, 0%, 100%);
+  --color-primary: rgb(65, 124, 169);
+	--color-primary-accent: rgba(65, 124, 169, 0.2);
+	--color-secondary: rgb(250, 152, 5);
+	--color-secondary-accent: rgba(250, 152, 5, 0.2);
+}
+
+.theme-dark {
+  --font-color: hsl(0, 0%, 100%);
+  --font-color-disabled: hsl(0, 0%, 25%);
+  --background-color: var(--color-primary-accent);
+  --foreground-color: rgb(35, 69, 92);
+  --color-primary: rgb(63, 125, 166);
+	--color-primary-accent: rgba(14, 28, 37, 0.9);
+	--color-secondary: rgb(250, 152, 5);
+	--color-secondary-accent: rgba(250, 152, 5, 0.8);
+}
 
 /*  
     ================
@@ -43,6 +73,8 @@ body {
   font-weight: 400;
   font-size: 100%; /*16px*/
   line-height: 1.75;
+  color: var(--font-color);
+  background-color: var(--background-color);
 }
 
 /*  
@@ -51,7 +83,7 @@ body {
     ==============
 */
 
-/* ----- Font size is "Perfect Fourth" from https://type-scale.com/ -----  */
+/* ----- Font size is "Major Third" from https://type-scale.com/ -----  */
 
 p {
   padding-bottom: 1rem;
@@ -69,33 +101,33 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 4.209rem;
+  font-size: 3.052rem;
   font-weight: 900;
 }
 
 h2 {
-  font-size: 3.157rem;
+  font-size: 2.441rem;
   font-weight: 700;
 }
 
-h3 {font-size: 2.369rem;}
+h3 {font-size: 1.953rem;}
 
 h4 {
-  font-size: 1.777rem;
+  font-size: 1.563rem;
   font-weight: 700;
 }
 
 h5 {
-  font-size: 1.333rem;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
 .small-text {
-  font-size: 0.889rem;
+  font-size: 0.8rem;
 }
 
 .large-text {
-  font-size: 1.333rem;
+  font-size: 1.25rem;
 }
 
 .semi-bold {
@@ -161,88 +193,7 @@ a {
     =============
 */
 
-/* ----- 3.1 Header ----- */
-
-header {
-}
-
-/* ----- 3.2 Section ----- */
-
-section {
-}
-
-/* ----- 3.3 Article ----- */
-
-article {
-}
-
-/* ----- 3.4 Form ----- */
-
-form {
-}
-
-/* ----- 3.5 Table ----- */
-
-table {
-}
-
-/* ----- 3.6 Summary  ----- */
-
-details {
-}
-
-/* ----- 3.7 Footer  ----- */
-
-footer {
-}
-
-/* ----- 3.8 Picture  ----- */
-
-picture img{
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* ----- 3.9 Break line  ----- */
-
-hr {
-  border: none;
-}
-
-/* Styling baseret på code-pen af Scott Zirkel https://codepen.io/scottzirkel/pen/yNxNME */
-
-.hr-text {
-  line-height: 1em;
-  position: relative;
-  outline: 0;
-  border: 0;
-  color: black;
-  text-align: center;
-  height: 1.5em;
-  opacity: .5;
-  margin: 0;
-  width: 100%;
-}
-.hr-text:before {
-  content: '';
-  background: var(--color-primary);
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-}
-.hr-text:after {
-  content: attr(data-content);
-  position: relative;
-  display: inline-block;
-  padding: 0 .5em;
-  line-height: 1.5em;
-  background-color: #D9E5EE;
-}
-
-/* ----- 3.10 Misc. Positions ----- */
+/* ----- 3.1 Misc. Positions ----- */
 
 .center-flex {
   display: flex;
@@ -316,20 +267,106 @@ hr {
   max-width: 48%;
 }
 
-.margin-hero {
-  margin-top: 120px;
-}
-
-.hero-img {
-  width: 30%;
-}
-
 .center-text {
   text-align: center;
 }
 
 .left-text {
   text-align: left;
+}
+
+.hide {
+  display: none;
+}
+
+/* ----- 3.2 Header ----- */
+
+header {
+}
+
+/* ----- 3.3 Section ----- */
+
+section {
+}
+
+/* ----- 3.4 Article ----- */
+
+article {
+}
+
+/* ----- 3.5 Form ----- */
+
+form {
+}
+
+/* ----- 3.6 Button ----- */
+
+button, input {
+  border: 0;
+  background-color: initial;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+  /* outline: none; */
+}
+
+/* ----- 3.7 Summary  ----- */
+
+details {
+}
+
+/* ----- 3.8 Footer  ----- */
+
+footer {
+}
+
+/* ----- 3.9 Picture  ----- */
+
+picture img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ----- 3.10 Break line  ----- */
+
+hr {
+  border: none;
+}
+
+/* Styling baseret på code-pen af Scott Zirkel https://codepen.io/scottzirkel/pen/yNxNME */
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
+  margin: 0;
+  width: 100%;
+}
+.hr-text:before {
+  content: '';
+  background: var(--color-primary);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  background-color: #D9E5EE;
 }
 
 /*  
@@ -339,8 +376,10 @@ hr {
 */
 
 .box {
+  background-color: var(--foreground-color);
   padding: var(--spacing-s);
   margin: var(--spacing-xl);
+  box-shadow: var(--shadow-normal) var(--color-primary-accent);
 }
 
 /* ----- 4.1 Nav-bar ----- */
@@ -354,7 +393,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   z-index: 20;
-  background-color: var(--color-neutral-white);
+  background-color: var(--foreground-color);
 }
 
 nav ul {
@@ -616,20 +655,107 @@ nav a {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
+  box-shadow: var(--shadow-normal) var(--color-primary-accent);
 }
 .kontakt-type:checked + label{
 	background-color: var(--color-secondary);
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow-btn) var(--color-primary-accent);
 }
 
 .for-kontakt-type {
   max-width: 6rem;
-  /* font-size: 1.777rem; */
   font-weight: 700;
   padding: 0;
 }
 
-/* ----- 4.8 Icons ----- */
+/* ----- 4.8 Checkbox ----- */
+
+/* The container */
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+display: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: var(--color-neutral-white);
+  border-radius: 50%;
+  border: 2px solid hsl(236, 33%, 92%);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark, .checkbox:focus input ~ .checkmark {
+  border: none;
+  top: 2px;
+  left: 2px;
+  z-index: 2;
+}
+
+/* gradiant border that appers when todo is hovered */
+ .checkbox::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: calc(1.5em + 4px);
+  width: calc(1.5em + 4px);
+  border-radius: 50%;
+  z-index: 0;
+  background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+} 
+
+/* When the checkbox is checked, add a blue background */
+.done.checkmark, .checkbox input:checked ~ .checkmark {
+  background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border: none;
+  top: 2px;
+  left: 2px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.done.checkmark::after, .checkbox input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.done ~ .todo-text, .checkbox input:checked ~ .todo-text {
+  text-decoration: line-through;
+  /* color: var(--font-color-disabled); */
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark::after, .checkbox input:checked ~ .checkmark::after {
+  left: calc(50% - 0.4em);
+  top: calc(50% - 0.4em);
+  width: 0.8em;
+  height: 0.8em;
+  content: "";
+  background:  url("../images/icons/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+/* ----- 4.9 Icons ----- */
 
 .icon {
   width: 2rem;
@@ -657,6 +783,10 @@ nav a {
 .icon-white {
   filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(156deg) brightness(104%) contrast(101%);
   padding: 0.2em;
+}
+
+.icon-black {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(99%) saturate(7478%) hue-rotate(201deg) brightness(115%) contrast(102%);
 }
 
 .icon-secondary {

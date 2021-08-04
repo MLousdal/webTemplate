@@ -29,3 +29,18 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// Tema toggle
+const body = document.querySelector("body");
+
+function toggleTheme() {
+  if (body.classList.contains("theme-light")) {
+    body.classList.replace("theme-light", "theme-dark");
+    toDark.classList.toggle("hide");
+    toLight.classList.toggle("hide");
+  } else {
+    body.classList.replace("theme-dark", "theme-light");
+    toLight.classList.toggle("hide");
+    toDark.classList.toggle("hide");
+  }
+}

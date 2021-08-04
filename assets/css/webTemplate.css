@@ -21,21 +21,11 @@
   
 	/* ----- Border variables */
 	--border-radius: 10px;
-  
-	/* ----- Colors ----- */
-  
-	/* --- Theme Colors --- */
-	--color-primary: rgb(65, 124, 169);
-	--color-primary-accent: rgba(65, 124, 169, 0.2);
-	--color-secondary: rgb(250, 152, 5);
-	--color-secondary-accent: rgba(250, 152, 5, 0.2);
-	--color-dark: rgba(25, 31, 39, 1);
-  
-	/* Text colors for theme */
-	--color-text-on-primary: rgb(255, 255, 255);
-	--color-text-on-secondary: rgb(0, 0, 0);
-	--color-text-on-dark: rgb(255, 255, 255);
-  
+    
+	/* ----- Shadows ----- */
+	--shadow-normal: 0px 6px 6px;
+	--shadow-btn: 0px 0px 18px;
+
 	/* --- Neutral Colors --- */
 	--color-neutral-white: hsl(0, 0%, 100%);
 	--color-neutral-lighterxx: hsl(0, 0%, 90%);
@@ -53,10 +43,6 @@
 	--color-text-on-succes: rgb(0, 0, 0);
 	--color-text-on-warning: rgb(0, 0, 0);
 	--color-text-on-error: rgb(255, 255, 255);
-  
-	/* ----- Shadows ----- */
-	--shadow-normal: 0px 6px 6px;
-	--shadow-btn: 0px 0px 18px;
   
 	/* --- Theme Colors --- */
 	--shadow-primary: var(--shadow-normal) var(--color-primary-accent);
@@ -247,37 +233,6 @@
   }
   .margin-xl-left {
 	margin-left: var(--spacing-xl);
-  }
-  
-  /* Theme Colors */
-  .color-primary {
-	background-color: var(--color-primary);
-	color: var(--color-text-on-primary);
-  }
-  .color-primary-accent {
-	background-color: var(--color-primary-accent);
-	color: var(--color-text-on-secondary);
-  }
-  .text-primary {
-	color: var(--color-primary);
-  }
-  .color-secondary {
-	background-color: var(--color-secondary);
-	color: var(--color-text-on-secondary);
-  }
-  .color-secondary-accent {
-	background-color: var(--color-secondary-accent);
-	color: var(--color-text-on-secondary);
-  }
-  .text-secondary {
-	color: var(--color-secondary);
-  }
-  .color-dark {
-	background-color: var(--color-dark);
-	color: var(--color-text-on-dark);
-  }
-  .text-dark {
-	color: var(--color-text-on-secondary);
   }
   
   /* Neutral Colors */
