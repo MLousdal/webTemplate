@@ -4,46 +4,6 @@
 */
 
 :root {
-	/* ----- Spacing variables */
-	--spacing: 1rem; /* Base spacing */
-	--spacing-multiplier-xs: 0.5;
-	--spacing-multiplier-m: 2;
-	--spacing-multiplier-l: 3;
-	--spacing-multiplier-xl: 4;
-  
-	/* Spacing translation */
-	/* For use insert fx. ´var(--spacing-s)´ into the wanted property */
-	--spacing-s: var(--spacing);
-	--spacing-xs: calc(var(--spacing) * var(--spacing-multiplier-xs));
-	--spacing-m: calc(var(--spacing) * var(--spacing-multiplier-m));
-	--spacing-l: calc(var(--spacing) * var(--spacing-multiplier-l));
-	--spacing-xl: calc(var(--spacing) * var(--spacing-multiplier-xl));
-  
-	/* ----- Border variables */
-	--border-radius: 10px;
-    
-	/* ----- Shadows ----- */
-	--shadow-normal: 0px 6px 6px;
-	--shadow-btn: 0px 0px 18px;
-
-	/* --- Neutral Colors --- */
-	--color-neutral-white: hsl(0, 0%, 100%);
-	--color-neutral-lighterxx: hsl(0, 0%, 90%);
-	--color-neutral-lighterx: hsl(0, 0%, 80%);
-	--color-neutral-lighter: hsl(0, 0%, 60%);
-	--color-neutral-light: hsl(0, 0%, 40%);
-	--color-neutral-dark: hsl(0, 0%, 20%);
-  
-	/* --- Notification colors --- */
-	--color-succes: hsl(87, 78%, 55%);
-	--color-warning: hsl(47, 78%, 55%);
-	--color-error: hsl(7, 78%, 55%);
-  
-	/* Text colors for notifications */
-	--color-text-on-succes: rgb(0, 0, 0);
-	--color-text-on-warning: rgb(0, 0, 0);
-	--color-text-on-error: rgb(255, 255, 255);
-  
 	/* --- Theme Colors --- */
 	--shadow-primary: var(--shadow-normal) var(--color-primary-accent);
 	--shadow-primary-pressed: var(--shadow-btn) var(--color-primary);
