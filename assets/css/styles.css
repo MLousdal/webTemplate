@@ -822,7 +822,7 @@ a:focus {
   width: 0.8em;
   height: 0.8em;
   content: "";
-  background: url("../images/icons/icon-check.svg");
+  background: url("../images/icons/checkbox/icon-check.svg");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
