@@ -72,7 +72,7 @@
 .theme-light {
   --font-color: hsl(0, 0%, 0%);
   --font-color-disabled: hsl(0, 0%, 25%);
-  --background-color: hsl(230, 25%, 95%);
+  --background-color: hsl(0, 0%, 95%);
   --foreground-color: hsl(0, 0%, 100%);
   --color-primary: hsl(204, 45%, 45%);
   --color-secondary: hsl(36, 96%, 50%);
@@ -82,8 +82,8 @@
 .theme-dark {
   --font-color: hsl(0, 0%, 100%);
   --font-color-disabled: hsl(0, 0%, 75%);
-  --background-color: hsl(206, 41%, 15%);
-  --foreground-color: hsl(206, 41%, 30%);
+  --background-color: hsl(204, 5%, 15%);
+  --foreground-color: hsl(204, 5%, 30%);
   --color-primary: hsl(204, 45%, 45%);
   --color-secondary: hsl(36, 96%, 50%);
   --shadow: hsl(0, 0%, 10%);
