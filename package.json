@@ -1,0 +1,20 @@
+{
+  "name": "webTemplateV2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "Mads Lousdal",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "autoprefixer": "^10.3.2",
+    "parcel": "^2.0.0-rc.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,25 @@
+@use "reset";
+
+$pink: pink; 
+$white: white; 
+
+body {
+    background-color: $pink;
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 10rem;
+    text-align: center;
+}
+
+section {
+    background-color: $white;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+h2 {
+    font-size: 6rem;
+    text-align: center;
+}
