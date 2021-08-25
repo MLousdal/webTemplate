@@ -345,17 +345,22 @@ article {
 form {
 }
 
+form label {
+  min-width: 10ch;
+  display: inline-block;
+}
+
 /* ----- 3.6 Button ----- */
 
 button,
 input {
   border: 0;
-  background-color: initial;
-  color: inherit;
+  background-color: var(--color-neutral-lighterx);
+  color: var(--color-neutral-dark);
   font-size: inherit;
   cursor: pointer;
   font-family: inherit;
-  padding: 0;
+  padding: var(--spacing-s) var(--spacing-m);
   margin: 0;
 }
 
