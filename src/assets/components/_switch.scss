@@ -1,0 +1,89 @@
+@use "./variables" as *;
+
+.switch-container {
+    display: inline-flex;
+    align-items: center;
+    &::after {
+        content: "Switch text here!";
+        position: relative;
+        left: $spacing-s;
+    }
+}
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+}
+
+.switch_toggle {
+    position: relative;
+    cursor: pointer;
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        transition: all 0.2s ease-out;
+        background: $color-neutral-lighter;
+    }
+
+    &::before {
+        height: 1.3em;
+        width: 3em;
+        border-radius: 0.65em;
+        opacity: 0.6;
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(0, -50%);
+        height: 0.8em;
+        width: 0.8em;
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.switch [type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* special states */
+.switch [type="checkbox"]:hover + .switch_toggle:hover::before,
+.switch [type="checkbox"]:hover + .switch_toggle:hover::after {
+    background-color: $color-neutral-light;
+}
+
+.switch [type="checkbox"]:focus + .switch_toggle::before,
+a:focus {
+    outline: $color-neutral-dark 1px solid;
+}
+
+.switch [type="checkbox"]:disabled + .switch_toggle {
+    cursor: not-allowed;
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+.switch [type="checkbox"]:disabled:hover + .switch_toggle:hover::before,
+.switch [type="checkbox"]:disabled:hover + .switch_toggle:hover::after {
+    background-color: $color-neutral-lighter;
+}
+
+.switch [type="checkbox"]:disabled + .switch_toggle::after {
+    box-shadow: none;
+}
+
+/* checked states */
+
+.switch [type="checkbox"]:checked + .switch_toggle::before,
+.switch [type="checkbox"]:checked + .switch_toggle::after {
+    background-color: $color-success;
+}
+
+.switch [type="checkbox"]:checked + .switch_toggle::after {
+    transform: translate(calc(2em - 100%), -50%);
+}

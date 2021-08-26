@@ -1,0 +1,91 @@
+@use "./variables" as *;
+
+/* The container */
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 2em;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+    display: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: $color-neutral-white;
+    border-radius: 50%;
+    border: 2px solid hsl(236, 33%, 92%);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark,
+.checkbox:focus input ~ .checkmark {
+    border: none;
+    top: 2px;
+    left: 2px;
+    z-index: 2;
+}
+
+/* gradiant border that appers when todo is hovered */
+.checkbox::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: calc(1.5em + 4px);
+    width: calc(1.5em + 4px);
+    border-radius: 50%;
+    z-index: 0;
+    background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+/* When the checkbox is checked, add a blue background */
+.done.checkmark,
+.checkbox input:checked ~ .checkmark {
+    background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border: none;
+    top: 2px;
+    left: 2px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.done.checkmark::after,
+.checkbox input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.done ~ .todo-text,
+.checkbox input:checked ~ .todo-text {
+    text-decoration: line-through;
+    color: $font-color-disabled;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark::after,
+.checkbox input:checked ~ .checkmark::after {
+    left: calc(50% - 0.4em);
+    top: calc(50% - 0.4em);
+    width: 0.8em;
+    height: 0.8em;
+    content: "";
+    background: url("../images/icons/checkbox/icon-check.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}

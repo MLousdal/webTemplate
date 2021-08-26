@@ -1,0 +1,10 @@
+@use "./variables" as *;
+
+.cta {
+    font-weight: 700;
+    padding: $spacing-s;
+    border-radius: $border-radius;
+    text-decoration: none;
+    margin: $spacing-s;
+    border: none;
+}

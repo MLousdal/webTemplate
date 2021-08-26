@@ -1,0 +1,100 @@
+@use "./variables" as *;
+
+.box {
+    background-color: $foreground-color;
+    padding: $spacing-s;
+    margin: $spacing-m 0;
+    box-shadow: $shadow-normal $shadow;
+  }
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.column-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.between-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.end-flex {
+    justify-content: flex-end;
+}
+
+.wrap-flex {
+    flex-wrap: wrap;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-self: flex-end;
+}
+
+.align-center {
+    align-self: center;
+}
+
+.gap-flex-s {
+    gap: $spacing-s;
+}
+
+.gap-flex {
+    gap: $spacing-m;
+}
+
+.gap-flex-l {
+    gap: $spacing-l;
+}
+
+.row-reverse-flex {
+    flex-direction: row-reverse;
+}
+
+.justify-right {
+    margin-left: auto;
+}
+
+.justify-left {
+    margin-right: auto;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wide {
+    width: 100%;
+}
+
+.thin {
+    max-width: 48%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.hide {
+    display: none;
+}
