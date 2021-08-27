@@ -1,0 +1,83 @@
+@use "./variables" as *;
+
+nav {
+    position: static;
+    top: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 5;
+    background-color: $foreground-color;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    li {
+        display: inline-flex;
+        justify-content: space-evenly;
+        padding: $spacing-xs;
+    }
+
+    a {
+        font-weight: 400;
+        text-decoration: none;
+        color: inherit;
+        border-radius: $border-radius;
+    }
+
+    .active {
+        font-weight: 700;
+    }
+
+    .nav-btn {
+        cursor: default;
+        pointer-events: none;
+        display: none;
+    }
+
+    .nav-btn img,
+    .nav-logo {
+        width: $spacing-m;
+        height: $spacing-m;
+        margin: $spacing-xs $spacing-s;
+    }
+
+    .nav-logo {
+        font-size: 1.3333rem;
+        font-weight: 900;
+        font-family: "Lato", sans-serif;
+    }
+
+    #nav-links {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    nav {
+        align-items: flex-start;
+    }
+    .nav-btn {
+        display: block;
+        cursor: pointer;
+        pointer-events: all;
+    }
+    #nav-links {
+        display: none;
+        position: absolute;
+        color: inherit;
+        top: $spacing-xl;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90%;
+        padding: $spacing-s;
+        background-color: $color-secondary;
+        border-radius: $border-radius;
+    }
+    nav li {
+        display: flex;
+    }
+}

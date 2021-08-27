@@ -1,0 +1,22 @@
+{
+  "name": "webtemplatev2",
+  "version": "1.0.0",
+  "description": "webTemplate is a template for websites that supply me with the variables, and classes I need to start a new project! 🚀",
+  "keywords": [],
+  "author": "Mads Lousdal",
+  "url": "madslousdal.dk",
+  "license": "MIT",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "autoprefixer": "^10.3.2",
+    "parcel": "^2.0.0-rc.0",
+    "sass": "^1.38.1"
+  },
+  "dependencies": {}
+}

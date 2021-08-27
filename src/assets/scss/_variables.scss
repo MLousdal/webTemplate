@@ -1,0 +1,39 @@
+/* --- Spacing variables --- */
+$spacing-s: 1rem;
+$spacing-xs: calc(#{$spacing-s} * 0.5);
+$spacing-m: calc(#{$spacing-s} * 2);
+$spacing-l: calc(#{$spacing-s} * 3);
+$spacing-xl: calc(#{$spacing-s} * 4);
+
+/* --- Border variables --- */
+$border-radius: 10px;
+
+/* --- Shadows --- */
+$shadow-normal: 0px 6px 6px;
+$shadow-btn: 0px 0px 18px;
+
+/* --- Neutral Colors --- */
+$color-neutral-white: hsl(0, 0%, 100%);
+$color-neutral-lighterxx: hsl(0, 0%, 90%);
+$color-neutral-lighterx: hsl(0, 0%, 80%);
+$color-neutral-lighter: hsl(0, 0%, 60%);
+$color-neutral-light: hsl(0, 0%, 40%);
+$color-neutral-dark: hsl(0, 0%, 20%);
+
+/* --- Notification colors --- */
+$color-success: hsl(87, 78%, 55%);
+$color-warning: hsl(47, 78%, 55%);
+$color-error: hsl(7, 78%, 55%);
+
+/* Text colors for notifications */
+$font-color-success: hsl(0, 0%, 0%);
+$font-color-warning: hsl(0, 0%, 0%);
+$font-color-error: hsl(0, 0%, 100%);
+
+$font-color: hsl(0, 0%, 100%);
+$font-color-disabled: hsl(0, 0%, 75%);
+$background-color: hsl(206, 41%, 15%);
+$foreground-color: hsl(206, 41%, 30%);
+$color-primary: hsl(204, 45%, 45%);
+$color-secondary: hsl(36, 96%, 50%);
+$shadow: hsl(0, 0%, 10%);

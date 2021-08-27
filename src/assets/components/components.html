@@ -1,0 +1,70 @@
+<!-- Navigation -->
+<nav>
+    <img src="assets/images/favicon-32x32.png" alt="logo" class="nav-logo">
+    <ul id="nav-links">
+        <li><a href="#" class="active underline">LINK A</a></li>
+        <li><a href="#" class="underline">LINK B</a></li>
+        <li><a href="#" class="underline">LINK C</a></li>
+        <li><a href="#" class="underline">LINK D</a></li>
+    </ul>
+    <button onclick="burgerToggle()" class="nav-btn" aria-label="menu"><img src="assets/images/icons/bars-solid.svg" alt=""></button>
+</nav>
+<script>
+    function burgerToggle() {
+    const navLinks = document.querySelector("#nav-links");
+    if (navLinks.style.display === "block") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "block";
+    }
+}
+</script>
+
+
+<!-- Theme toggle -->
+<div class="center-flex wrap-flex gap-flex box">
+    <button onclick="toggleTheme()" aria-label="theme-toggle" class="theme-toggle">
+        <img src="assets/images/icons/theme-toggle/icon-moon.svg" alt="Theme toggle" class="icon icon-black" id="toLight">
+        <img src="assets/images/icons/theme-toggle/icon-sun.svg" alt="Theme toggle" class="icon hide" id="toDark">
+    </button>
+</div>
+
+<!-- Slider -->
+<div class="color-neutral-white box center-flex column-flex">
+    <div class="slide-container">
+        <input type="range" min="1" max="100" value="50" class="slider color-neutral-lighterx" id="myRange">
+    </div>
+    <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox"/>
+            <span class="switch_toggle"></span>
+        </label>
+    </div>
+</div>
+
+<!-- Gradient checkbox -->
+<li class="center-flex">
+    <label class="checkbox" for="x">
+        <input type="checkbox" id="x">
+        <span class="checkmark"></span>
+        <span class="checkbox-text">Checkbox text here!</span>
+    </label>
+</li>
+
+<!-- toTopBtn -->
+<button onclick="topFunction()" id="toTopBtn" title="Go to top" class="scale"><img src="assets/images/icons/toTopBtn/arrow-up-solid.svg" alt=""></button>
+<script>
+    // Scroll to top button, based on example from w3schools (https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
+toTopBtn = document.querySelector("#toTopBtn");
+
+// Denne kode gør at knappen dukker op når brugeren har rullet 20px ned ad siden
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    toTopBtn.style.display = "block";
+  } else {
+    toTopBtn.style.display = "none";
+  }
+}
+</script>

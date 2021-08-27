@@ -1,0 +1,15 @@
+@use "./reset";
+@use "./variables" as *;
+@use "./misc";
+@use "./topography";
+@use "./body";
+// @use "./navBar";
+// @use "./cta";
+// @use "./slider";
+// @use "./switch";
+// @use "./gradientCheckbox";
+// @use "./toTopBtn";
+
+.hero {
+    height: 100vh;
+}
