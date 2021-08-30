@@ -1,6 +1,15 @@
-@use "./variables" as *;
+@use "../base/variables" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 112.5%; /*18px*/
+    line-height: 1.75;
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
 
 p {
     padding-bottom: $spacing-s;
@@ -18,7 +27,7 @@ h5 {
 
 h1 {
     margin-top: 0;
-    font-size: 3.052rem;
+    font-size: clamp(3em, 10vw, 6em);
     font-weight: 900;
 }
 
@@ -29,6 +38,7 @@ h2 {
 
 h3 {
     font-size: 1.953rem;
+    padding-bottom: 1em;
 }
 
 h4 {
@@ -69,7 +79,7 @@ a {
 
     &::after {
         content: "";
-        background-image: url(../images/icons/foreign.svg);
+        background-image: url(../images/icons/mdi_open-in-new.svg);
         background-size: cover;
         position: relative;
         display: inline-block;
@@ -82,7 +92,7 @@ a {
 
 .underline {
     padding-bottom: 2px;
-    background: linear-gradient($color-primary, $color-primary) bottom;
+    background: linear-gradient(var(--color-primary), var(--color-primary)) bottom;
     background-size: 0% 2px;
     background-repeat: no-repeat;
     transition: all 0.45s;

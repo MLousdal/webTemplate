@@ -1,11 +1,11 @@
-@use "./variables" as *;
+@use "../base/variables" as *;
 
 .box {
-    background-color: $foreground-color;
+    background-color: var(--foreground-color);
     padding: $spacing-s;
     margin: $spacing-m 0;
-    box-shadow: $shadow-normal $shadow;
-  }
+    box-shadow: $shadow-normal var(--shadow);
+}
 
 .center-flex {
     display: flex;
@@ -97,4 +97,11 @@
 
 .hide {
     display: none;
+}
+
+@mixin sectionSpacing {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    padding: $spacing-xl 0;
 }

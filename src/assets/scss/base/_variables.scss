@@ -2,8 +2,8 @@
 $spacing-s: 1rem;
 $spacing-xs: calc(#{$spacing-s} * 0.5);
 $spacing-m: calc(#{$spacing-s} * 2);
-$spacing-l: calc(#{$spacing-s} * 3);
-$spacing-xl: calc(#{$spacing-s} * 4);
+$spacing-l: calc(#{$spacing-s} * 4);
+$spacing-xl: calc(#{$spacing-s} * 8);
 
 /* --- Border variables --- */
 $border-radius: 10px;
@@ -29,11 +29,3 @@ $color-error: hsl(7, 78%, 55%);
 $font-color-success: hsl(0, 0%, 0%);
 $font-color-warning: hsl(0, 0%, 0%);
 $font-color-error: hsl(0, 0%, 100%);
-
-$font-color: hsl(0, 0%, 100%);
-$font-color-disabled: hsl(0, 0%, 75%);
-$background-color: hsl(206, 41%, 15%);
-$foreground-color: hsl(206, 41%, 30%);
-$color-primary: hsl(204, 45%, 45%);
-$color-secondary: hsl(36, 96%, 50%);
-$shadow: hsl(0, 0%, 10%);

@@ -1,0 +1,18 @@
+@use "../base/variables" as *;
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: $spacing-l;
+
+    p {
+        font-size: 1.953rem;
+        width: 50%;
+        text-align: center;
+        & .color-primary {
+            color: var(--color-primary);
+        }
+    }
+}

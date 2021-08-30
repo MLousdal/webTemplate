@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+.theme-toggle {
+    position: absolute;
+    top: $spacing-s;
+    right: $spacing-s;
+    width: $spacing-m;
+    height: $spacing-m;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
