@@ -98,10 +98,3 @@
 .hide {
     display: none;
 }
-
-@mixin sectionSpacing {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-xl;
-    padding: $spacing-xl 0;
-}

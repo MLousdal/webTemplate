@@ -1,31 +1,46 @@
-/* --- Spacing variables --- */
+// Core variables
+$version: "0.3.0";
+
+// Spacing variables 
 $spacing-s: 1rem;
 $spacing-xs: calc(#{$spacing-s} * 0.5);
 $spacing-m: calc(#{$spacing-s} * 2);
 $spacing-l: calc(#{$spacing-s} * 4);
-$spacing-xl: calc(#{$spacing-s} * 8);
+$spacing-xl: calc(#{$spacing-s} * 6);
+$spacing-xxl: calc(#{$spacing-s} * 8);
 
-/* --- Border variables --- */
+// Border variables 
 $border-radius: 10px;
+$border-radius-s: calc(#{$border-radius} * 0.5);
+$border-radius-l: calc(#{$border-radius} * 1.5);
+$border-radius-o: calc(#{$border-radius} * 100);
 
-/* --- Shadows --- */
-$shadow-normal: 0px 6px 6px;
-$shadow-btn: 0px 0px 18px;
+// Shadows 
+$shadow-offset: 0px 0px;
+$shadow-normal: #{$shadow-offset} 6px;
+$shadow-normal-s: #{$shadow-offset} 3px;
+$shadow-normal-l: #{$shadow-offset} 12px;
 
-/* --- Neutral Colors --- */
-$color-neutral-white: hsl(0, 0%, 100%);
-$color-neutral-lighterxx: hsl(0, 0%, 90%);
-$color-neutral-lighterx: hsl(0, 0%, 80%);
-$color-neutral-lighter: hsl(0, 0%, 60%);
-$color-neutral-light: hsl(0, 0%, 40%);
-$color-neutral-dark: hsl(0, 0%, 20%);
+//  Neutral colors
+$dark-color: #303742;
+$light-color: #fff;
+$neutral-color: lighten($dark-color, 55%);
+$neutral-color-dark: darken($neutral-color, 30%);
+$neutral-color-light: lighten($neutral-color, 20%);
 
-/* --- Notification colors --- */
+$border-color: lighten($dark-color, 65%);
+$border-color-dark: darken($border-color, 10%);
+$border-color-light: lighten($border-color, 8%);
+$bg-color: lighten($dark-color, 75%);
+$bg-color-dark: darken($bg-color, 3%);
+$bg-color-light: $light-color;
+
+// Notification colors 
 $color-success: hsl(87, 78%, 55%);
 $color-warning: hsl(47, 78%, 55%);
 $color-error: hsl(7, 78%, 55%);
 
-/* Text colors for notifications */
+// Text colors for notifications
 $font-color-success: hsl(0, 0%, 0%);
 $font-color-warning: hsl(0, 0%, 0%);
 $font-color-error: hsl(0, 0%, 100%);

@@ -9,10 +9,7 @@
 
     p {
         font-size: 1.953rem;
-        width: 50%;
+        width: $spacing-l;
         text-align: center;
-        & .color-primary {
-            color: var(--color-primary);
-        }
     }
 }

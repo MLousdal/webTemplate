@@ -1,13 +1,6 @@
-@use "./reset/reset";
-@use "./base/variables" as *;
-@use "./base/html";
-@use "./base/utility";
-@use "./base/topography";
-@use "./layout/hero";
-// @use "./modules/arrow";
-// @use "./modules/icons";
-// @use "./modules/themeToggle";
-// @use "./modules/wave";
-// @use "./modules/links";
-@use "./themes/dark";
-@use "./themes/light";
+/*! webTemplate | MIT License | https://github.com/MLousdal/webTemplate */
+@use "base";
+@use "mixins";
+@use "layout";
+@use "module";
+@use "themes";
