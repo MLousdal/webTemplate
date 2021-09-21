@@ -1,8 +1,8 @@
 @use "../base/variables" as *;
 
 .icon {
-    width: $spacing-2;
-    height: $spacing-2;
+    width: $unit-2;
+    height: $unit-2;
 
     &:hover {
         filter: var(--filter);

@@ -1,11 +1,16 @@
 @use "../base/variables" as *;
 
+table {
+  width: 100%;
+}
+
 th,
 td {
-  padding: $spacing-1 $spacing-05;
+  padding: $unit-1 $unit-05;
   text-align: left;
+  white-space: nowrap;
   border-bottom: 1px solid var(--border);
-  
+
   &:not(:first-child, :last-child) {
     padding: inherit 0;
   }
@@ -15,8 +20,9 @@ th {
   border-bottom: 2px solid var(--border);
 }
 
-@media (max-width: 750px) {
-  table {
+@media (max-width: 550px) {
+  .table-container {
+    width: 100%;
     overflow-x: scroll;
   }
 }

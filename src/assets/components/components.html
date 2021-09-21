@@ -22,15 +22,27 @@
 
 
 <!-- Theme toggle -->
-<div class="center-flex wrap-flex gap-flex box">
+<div class="center wrap gap box">
     <button onclick="toggleTheme()" aria-label="theme-toggle" class="theme-toggle">
         <img src="assets/images/icons/theme-toggle/icon-moon.svg" alt="Theme toggle" class="icon icon-black" id="toLight">
         <img src="assets/images/icons/theme-toggle/icon-sun.svg" alt="Theme toggle" class="icon hide" id="toDark">
     </button>
 </div>
+<script>
+const body = document.querySelector("body");
+const themeToggle = document.querySelector("#themeToggle");
+
+themeToggle.addEventListener("click", () => {
+  if (body.classList.contains("theme-light")) {
+    body.classList.replace("theme-light", "theme-dark");
+  } else {
+    body.classList.replace("theme-dark", "theme-light");
+  }
+});
+</script>
 
 <!-- Slider -->
-<div class="color-neutral-white box center-flex column-flex">
+<div class="color-neutral-white box center column">
     <div class="slide-container">
         <input type="range" min="1" max="100" value="50" class="slider color-neutral-lighterx" id="myRange">
     </div>
@@ -43,7 +55,7 @@
 </div>
 
 <!-- Gradient checkbox -->
-<li class="center-flex">
+<li class="center">
     <label class="checkbox" for="x">
         <input type="checkbox" id="x">
         <span class="checkmark"></span>

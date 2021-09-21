@@ -11,11 +11,12 @@
     <script src="assets/js/index.js" defer="true" type="module"></script>
 </head>
 <body class="theme-light">
-    <header class="wrapper flex center-flex column-flex gap-flex">
+    <header class="wrapper flex center column gap">
         <h1 class="box semi-bold center-text">Showcase! 🗺️</h1>
-        <a href="index.html" class="button button-primary">index</a>
+        <a href="index.html" class="btn btn-primary">index</a>
+        <input type="checkbox" id="themeToggle" aria-label="theme-toggle" class="toggle">
     </header>
-    <section class="wrapper flex column-flex gap-flex-1 box">
+    <section class="wrapper flex column gap-1 box">
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -23,7 +24,7 @@
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
     </section>
-    <section class="wrapper flex center-flex">
+    <section class="wrapper flex center">
         <p class="box">
             <a href="#">a element</a><br>
             <a href="#" class="external-link">a element (external)</a><br>
@@ -50,43 +51,57 @@
             <var>var element</var>
           </p>
     </section>
-    <section class="wrapper flex column-flex gap-flex-1">
-        <section class="box flex gap-flex center-flex">
-            <a href="#" class="button">Anchor</a>
-            <button>Button</button>
-            <input type="button" value="button">
-            <input type="submit" value="submit">
+    <section class="wrapper flex column gap-1">
+        <section class="box flex gap center wrap">
+            <a href="#" class="btn btn-sm">small</a>
+            <button class="">Button</button>
+            <input type="button" value="large" class="btn-lg">
+            <input type="submit" value="active" class="active">
+            <button class="disabled" tabindex="-1">Disabled</button>
+            <button class="loading" tabindex="-1">Button</button>
+            <button class="btn-lg loading loading-lg" tabindex="-1">Button</button>
         </section>
-        <section class="box flex gap-flex center-flex">
-            <a href="#" class="button button-primary">Anchor</a>
-            <button class="button-primary">Button</button>
-            <input type="button" value="button" class="button-primary">
-            <input type="submit" value="submit" class="button-primary">
+        <section class="box flex gap center wrap">
+            <a href="#" class="btn btn-primary btn-sm">small</a>
+            <button class="btn-primary">Button</button>
+            <input type="button" value="large" class="btn-primary btn-lg">
+            <input type="submit" value="active" class="btn-primary active">
+            <button class="btn-primary disabled" tabindex="-1">Disabled</button>
+            <button class="btn-primary loading" tabindex="-1">Button</button>
+            <button class="btn-primary btn-lg loading loading-lg" tabindex="-1">Button</button>
         </section>
-        <section class="box flex gap-flex center-flex">
-            <a href="#" class="button button-success">Anchor</a>
-            <button class="button-success">Button</button>
-            <input type="button" value="button" class="button-success">
-            <input type="submit" value="submit" class="button-success">
+        <section class="box flex gap center wrap">
+            <a href="#" class="btn btn-success btn-sm">small</a>
+            <button class="btn-success">Button</button>
+            <input type="button" value="large" class="btn-success btn-lg">
+            <input type="submit" value="active" class="btn-success active">
+            <button class="btn-success disabled" tabindex="-1">Disabled</button>
+            <button class="btn-success loading" tabindex="-1">Button</button>
+            <button class="btn-success btn-lg loading loading-lg" tabindex="-1">Button</button>
         </section>
-        <section class="box flex gap-flex center-flex">
-            <a href="#" class="button button-warning">Anchor</a>
-            <button class="button-warning">Button</button>
-            <input type="button" value="button" class="button-warning">
-            <input type="submit" value="submit" class="button-warning">
+        <section class="box flex gap center wrap">
+            <a href="#" class="btn btn-warning btn-sm">small</a>
+            <button class="btn-warning">Button</button>
+            <input type="button" value="large" class="btn-warning btn-lg">
+            <input type="submit" value="active" class="btn-warning active">
+            <button class="btn-warning disabled" tabindex="-1">Disabled</button>
+            <button class="btn-warning loading" tabindex="-1">Button</button>
+            <button class="btn-warning btn-lg loading loading-lg" tabindex="-1">Button</button>
         </section>
-        <section class="box flex gap-flex center-flex">
-            <a href="#" class="button button-error">Anchor</a>
-            <button class="button-error">Button</button>
-            <input type="button" value="button" class="button-error">
-            <input type="submit" value="submit" class="button-error">
+        <section class="box flex gap center wrap">
+            <a href="#" class="btn btn-error btn-sm">small</a>
+            <button class="btn-error">Button</button>
+            <input type="button" value="large" class="btn-error btn-lg">
+            <input type="submit" value="active" class="btn-error active">
+            <button class="btn-error disabled" tabindex="-1">Disabled</button>
+            <button class="btn-error loading" tabindex="-1">Button</button>
+            <button class="btn-error btn-lg loading loading-lg" tabindex="-1">Button</button>
         </section>
     </section>
-    <form class="wrapper box">
+    <form class="wrapper box flex column gap-1">
             <label for="exampleEmailInput">Your email
                 <input class="wide" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
             </label>
-            
             <label for="exampleRecipientInput">Reason for contacting                
                 <select class="wide" id="exampleRecipientInput">
                   <option value="Option 1">Questions</option>
@@ -99,11 +114,12 @@
         </label>
         <label class="example-send-yourself-copy">
           <input type="checkbox">
-          <span class="label-body">Send a copy to yourself</span>
+          Send a copy to yourself
         </label>
-        <input class="button-primary" type="submit" value="Submit">
+        <input type="checkbox" class="toggle" data-text="Also send me a check">
+        <input class="btn-primary" type="submit" value="submit">
       </form>
-    <section class="wrapper box flex columns-2 between-flex">
+    <section class="wrapper box flex columns-2 between wrap">
           <ul>
             <li>Unordered lists have basic styles</li>
             <li>
@@ -133,29 +149,33 @@
 }</code></pre><br />
             <code>.some-class {background-color: red; }</code>
     </section>
-    <table class="wrapper box">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Sex</th>
-            <th>Location</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dave Gamache</td>
-            <td>26</td>
-            <td>Male</td>
-            <td>San Francisco</td>
-          </tr>
-          <tr>
-            <td>Dwayne Johnson</td>
-            <td>42</td>
-            <td>Male</td>
-            <td>Hayward</td>
-          </tr>
-        </tbody>
-      </table>
+    <section class="wrapper box">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Sex</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dave Gamache</td>
+              <td>26</td>
+              <td>Male</td>
+              <td>San Francisco</td>
+            </tr>
+            <tr>
+              <td>Dwayne Johnson</td>
+              <td>42</td>
+              <td>Male</td>
+              <td>Hayward</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
 </body>
 </html>

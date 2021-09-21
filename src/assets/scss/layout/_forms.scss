@@ -1,15 +1,22 @@
 @use "../base/variables" as *;
 
+input[type="date"],
+input[type="datetime-local"],
 input[type="email"],
+input[type="file"],
+input[type="month"],
 input[type="number"],
 input[type="search"],
 input[type="text"],
 input[type="tel"],
+input[type="time"],
 input[type="url"],
 input[type="password"],
+input[type="week"],
 textarea,
 select {
-  padding: $spacing-1; /* The 6px vertically centers text on FF, ignored by Webkit */
+  color: var(--font-color-form);
+  padding: $unit-05;
   background-color: #fff;
   border: 1px solid #d1d1d1;
   border-radius: $border-radius-s;
@@ -29,8 +36,8 @@ textarea {
 label,
 legend {
   display: block;
-  margin-bottom: $spacing-05;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: calc(#{$unit-1} * 1.1);
 }
 
 fieldset {
@@ -44,6 +51,6 @@ input[type="radio"] {
 }
 label > .label-body {
   display: inline-block;
-  margin-left: $spacing-05;
+  margin-left: $unit-05;
   font-weight: normal;
 }

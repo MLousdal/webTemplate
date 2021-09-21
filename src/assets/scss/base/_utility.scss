@@ -3,76 +3,11 @@
 .box {
     background-color: var(--foreground-color);
     width: 100%;
-    padding: $spacing-1;
+    padding: $unit-1;
     box-shadow: $shadow-normal var(--shadow);
 }
 
-.flex {
-    display: flex !important;
-}
-
-.center-flex {
-    justify-content: center;
-    align-items: center;
-}
-
-.row-flex {
-    align-items: center;
-    flex-direction: row;
-}
-
-.column-flex {
-    flex-direction: column;
-}
-
-.between-flex {
-    justify-content: space-between;
-}
-
-.end-flex {
-    justify-content: flex-end;
-}
-
-.wrap-flex {
-    flex-wrap: wrap;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-
-.align-end {
-    align-self: flex-end;
-}
-
-.align-center {
-    align-self: center;
-}
-
-.gap-flex-1 {
-    gap: $spacing-1;
-}
-
-.gap-flex {
-    gap: $spacing-2;
-}
-
-.gap-flex-3 {
-    gap: $spacing-3;
-}
-
-.row-reverse-flex {
-    flex-direction: row-reverse;
-}
-
-.justify-right {
-    margin-left: auto;
-}
-
-.justify-left {
-    margin-right: auto;
-}
-
+// Base
 .wrapper {
     width: 90%;
     max-width: 1200px;
@@ -87,7 +22,79 @@
     max-width: 48%;
 }
 
-.center-text {
+.hide {
+    display: none;
+}
+
+// Flex
+.flex {
+    display: flex !important;
+    
+    &.center {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &.row {
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    &.column {
+        flex-direction: column;
+    }
+    
+    &.between {
+        justify-content: space-between;
+    }
+    
+    &.end {
+        justify-content: flex-end;
+    }
+    
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    
+    &.align-start {
+        align-items: flex-start;
+    }
+    
+    &.align-end {
+        align-self: flex-end;
+    }
+    
+    &.align-center {
+        align-self: center;
+    }
+    
+    &.gap-1 {
+        gap: $unit-1;
+    }
+    
+    &.gap {
+        gap: $unit-2;
+    }
+    
+    &.gap-3 {
+        gap: $unit-3;
+    }
+    
+    &.row-reverse {
+        flex-direction: row-reverse;
+    }
+    
+    &.full-right {
+        margin-left: auto;
+    }
+    
+    &.full-left {
+        margin-right: auto;
+    }
+}
+    
+    // Text
+    .center-text {
     text-align: center;
 }
 
@@ -95,10 +102,11 @@
     text-align: left;
 }
 
-.hide {
-    display: none;
-}
-
+// Columns
 .columns-2 {
     columns: 2 auto;
+}
+
+.columns-3 {
+    columns: 3 auto;
 }

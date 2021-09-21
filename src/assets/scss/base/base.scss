@@ -17,6 +17,6 @@ body {
     // gaps in column layout
     display: flex;
     flex-flow: column nowrap;
-    gap: $spacing-4;
-    padding: $spacing-2 0;
+    gap: $unit-4;
+    padding: $unit-2 0;
 }

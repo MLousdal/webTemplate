@@ -1,5 +1,49 @@
 @use "../base/variables" as *;
 
+.loading {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+  &::after {
+    animation: loading 500ms infinite linear;
+    background: transparent;
+    border: 2px solid var(--font-color);
+    border-radius: $border-radius-o;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: $unit-1;
+    left: 50%;
+    margin-left: -#{$unit-05};
+    margin-top: -#{$unit-05};
+    opacity: 1;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: $unit-1;
+
+  }
+
+  &.loading-lg {
+    &::after {
+      height: $unit-2;
+      margin-left: -$unit-1;
+      margin-top: -$unit-1;
+      width: $unit-2;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .underline {
   padding-bottom: 2px;
   background: linear-gradient(var(--color-primary), var(--color-primary)) bottom;
@@ -9,7 +53,7 @@
 
   &:hover,
   &:focus {
-      background-size: 50% 2px;
-      outline: none;
+    background-size: 50% 2px;
+    outline: none;
   }
 }
