@@ -1,0 +1,49 @@
+@use "../base/variables" as *;
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  padding: $spacing-1; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: $border-radius-s;
+  box-shadow: none;
+  box-sizing: border-box;
+
+  &:focus {
+    border: 2px solid var(--color-primary);
+    outline: 0;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: $spacing-05;
+  font-weight: 600;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+label > .label-body {
+  display: inline-block;
+  margin-left: $spacing-05;
+  font-weight: normal;
+}

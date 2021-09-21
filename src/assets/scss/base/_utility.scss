@@ -2,30 +2,30 @@
 
 .box {
     background-color: var(--foreground-color);
-    padding: $spacing-s;
-    margin: $spacing-m 0;
+    width: 100%;
+    padding: $spacing-1;
     box-shadow: $shadow-normal var(--shadow);
 }
 
+.flex {
+    display: flex !important;
+}
+
 .center-flex {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .row-flex {
-    display: flex;
     align-items: center;
     flex-direction: row;
 }
 
 .column-flex {
-    display: flex;
     flex-direction: column;
 }
 
 .between-flex {
-    display: flex;
     justify-content: space-between;
 }
 
@@ -49,16 +49,16 @@
     align-self: center;
 }
 
-.gap-flex-s {
-    gap: $spacing-s;
+.gap-flex-1 {
+    gap: $spacing-1;
 }
 
 .gap-flex {
-    gap: $spacing-m;
+    gap: $spacing-2;
 }
 
-.gap-flex-l {
-    gap: $spacing-l;
+.gap-flex-3 {
+    gap: $spacing-3;
 }
 
 .row-reverse-flex {
@@ -97,4 +97,8 @@
 
 .hide {
     display: none;
+}
+
+.columns-2 {
+    columns: 2 auto;
 }

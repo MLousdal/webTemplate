@@ -1,0 +1,22 @@
+@use "../base/variables" as *;
+
+* {
+    box-sizing: border-box;
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    // gaps in column layout
+    display: flex;
+    flex-flow: column nowrap;
+    gap: $spacing-4;
+    padding: $spacing-2 0;
+}

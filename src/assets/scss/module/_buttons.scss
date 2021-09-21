@@ -1,0 +1,80 @@
+@use "../base/variables" as *;
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  font-family: unset;
+  padding: $spacing-1 $spacing-2;
+  color: var(--border);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: $border-radius-s;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  width: fit-content;
+
+  &:hover,
+  &:focus {
+    color: var(--border-dark);
+    border-color: var(--border-dark);
+    // outline: 0;
+    text-decoration: none;
+  }
+
+  &.button-primary {
+    color: var(--font-color-inverse);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary-light);
+      border-color: var(--color-primary-light);
+    }
+  }
+
+  &.button-success {
+    color: $neutral-0;
+    background-color: $success-color;
+    border-color: $success-color;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-success-light);
+      border-color: var(--color-success-light);
+    }
+  }
+
+  &.button-warning {
+    color: $neutral-0;
+    background-color: $warning-color;
+    border-color: $warning-color;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-warning-light);
+      border-color: var(--color-warning-light);
+    }
+  }
+  
+  &.button-error {
+    color: $neutral-0;
+    background-color: $error-color;
+    border-color: $error-color;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-error-light);
+      border-color: var(--color-error-light);
+    }
+  }
+
+}

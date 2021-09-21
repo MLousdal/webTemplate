@@ -1,0 +1,21 @@
+@use "../base/variables" as *;
+
+code {
+  display: inline-block;
+  padding: $spacing-1;
+  font-size: 90%;
+  white-space: nowrap;
+  background: var(--midground-color);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-s;
+}
+
+pre > code {
+  white-space: pre;
+}
+
+@media (max-width: 750px) {
+  code {
+    overflow-x: scroll;
+  }
+}

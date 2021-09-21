@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website Base</title>
+    <meta name="description" content="WRITE A DESCRIPTION HERE!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/scss/main.scss">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
+    <script src="assets/js/index.js" defer="true" type="module"></script>
+</head>
+<body class="theme-light">
+    <header class="wrapper flex center-flex column-flex gap-flex">
+        <h1 class="box semi-bold center-text">Showcase! 🗺️</h1>
+        <a href="index.html" class="button button-primary">index</a>
+    </header>
+    <section class="wrapper flex column-flex gap-flex-1 box">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </section>
+    <section class="wrapper flex center-flex">
+        <p class="box">
+            <a href="#">a element</a><br>
+            <a href="#" class="external-link">a element (external)</a><br>
+            <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr>s<br>
+            <b>b element</b><br>
+            <strong>strong element</strong><br>
+            <cite>cite element</cite><br>
+            <code>code element</code><br>
+            <del>del element</del><br>
+            <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn>s<br>
+            <em>em element</em><br>
+            <i>i element</i><br>
+            <ins>ins element</ins><br>
+            <kbd>kbd element</kbd><br>
+            <mark>mark element</mark><br>
+            <q>q element <q>inside</q> a q element</q><br>
+            <s>s element</s><br>
+            <samp>samp element</samp><br>
+            <small>small element</small><br>
+            <span>span element</span><br>
+            <sup>sup element</sup><br>
+            <sub>sub element</sub><br>
+            <u>u element</u><br>
+            <var>var element</var>
+          </p>
+    </section>
+    <section class="wrapper flex column-flex gap-flex-1">
+        <section class="box flex gap-flex center-flex">
+            <a href="#" class="button">Anchor</a>
+            <button>Button</button>
+            <input type="button" value="button">
+            <input type="submit" value="submit">
+        </section>
+        <section class="box flex gap-flex center-flex">
+            <a href="#" class="button button-primary">Anchor</a>
+            <button class="button-primary">Button</button>
+            <input type="button" value="button" class="button-primary">
+            <input type="submit" value="submit" class="button-primary">
+        </section>
+        <section class="box flex gap-flex center-flex">
+            <a href="#" class="button button-success">Anchor</a>
+            <button class="button-success">Button</button>
+            <input type="button" value="button" class="button-success">
+            <input type="submit" value="submit" class="button-success">
+        </section>
+        <section class="box flex gap-flex center-flex">
+            <a href="#" class="button button-warning">Anchor</a>
+            <button class="button-warning">Button</button>
+            <input type="button" value="button" class="button-warning">
+            <input type="submit" value="submit" class="button-warning">
+        </section>
+        <section class="box flex gap-flex center-flex">
+            <a href="#" class="button button-error">Anchor</a>
+            <button class="button-error">Button</button>
+            <input type="button" value="button" class="button-error">
+            <input type="submit" value="submit" class="button-error">
+        </section>
+    </section>
+    <form class="wrapper box">
+            <label for="exampleEmailInput">Your email
+                <input class="wide" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+            </label>
+            
+            <label for="exampleRecipientInput">Reason for contacting                
+                <select class="wide" id="exampleRecipientInput">
+                  <option value="Option 1">Questions</option>
+                  <option value="Option 2">Admiration</option>
+                  <option value="Option 3">Can I get your number?</option>
+                </select>
+            </label>
+        <label for="exampleMessage">Message
+            <textarea class="wide" placeholder="Hi Dave …" id="exampleMessage" rows="3"></textarea>
+        </label>
+        <label class="example-send-yourself-copy">
+          <input type="checkbox">
+          <span class="label-body">Send a copy to yourself</span>
+        </label>
+        <input class="button-primary" type="submit" value="Submit">
+      </form>
+    <section class="wrapper box flex columns-2 between-flex">
+          <ul>
+            <li>Unordered lists have basic styles</li>
+            <li>
+              They use the circle list style
+              <ol>
+                <li>Nested lists styled to feel right</li>
+                <li>Can nest either type of list into the other</li>
+              </ol>
+            </li>
+            <li>Just more list items mama san</li>
+          </ul>
+          <ol>
+            <li>Ordered lists also have basic styles</li>
+            <li>
+              They use the decimal list style
+              <ul>
+                <li>Ordered and unordered can be nested</li>
+                <li>Can nest either type of list into the other</li>
+              </ul>
+            </li>
+            <li>Last list item just for the fun</li>
+          </ol>
+    </section>
+    <section class="wrapper box">
+            <pre><code class="wide">.some-class {
+    background-color: red;
+}</code></pre><br />
+            <code>.some-class {background-color: red; }</code>
+    </section>
+    <table class="wrapper box">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dave Gamache</td>
+            <td>26</td>
+            <td>Male</td>
+            <td>San Francisco</td>
+          </tr>
+          <tr>
+            <td>Dwayne Johnson</td>
+            <td>42</td>
+            <td>Male</td>
+            <td>Hayward</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>

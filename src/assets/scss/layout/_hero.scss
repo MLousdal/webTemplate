@@ -5,11 +5,5 @@
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
-    gap: $spacing-l;
-
-    p {
-        font-size: 1.953rem;
-        width: $spacing-l;
-        text-align: center;
-    }
+    gap: $spacing-6;
 }

@@ -1,15 +1,36 @@
 @use "../base/variables" as *;
 
 .theme-light {
-    --font-color: hsl(0, 0%, 0%);
-    --background-color: hsl(0, 0%, 95%);
-    --foreground-color: hsl(0, 0%, 100%);
-    --form-color: hsl(0, 0%, 80%);
-    --form-text: hsl(0, 0%, 37%);
+   // typography
+    --font-color: #{$neutral-0};
+    --font-color-inverse: #{$neutral-100};
+    --filter-font-color: invert(0%) sepia(11%) saturate(7481%) hue-rotate(175deg) brightness(110%) contrast(91%);
+    --filter-font-color-inverse: invert(100%) sepia(100%) saturate(1%) hue-rotate(94deg) brightness(102%) contrast(101%);
+
+
+    // base colors
     --color-primary: hsl(212, 100%, 50%);
-    --color-overlay: hsla(212, 100%, 50%, 0.15);
-    --color-overlay-hover: hsla(212, 100%, 50%, 0);
-    --shadow: hsl(0, 0%, 10%);
-    --filter: invert(39%) sepia(75%) saturate(6272%) hue-rotate(204deg) brightness(105%) contrast(106%);
-    --tool: invert(0%) sepia(2%) saturate(6%) hue-rotate(63deg) brightness(92%) contrast(100%);
+    --color-primary-dark: hsl(212, 100%, 40%);
+    --color-primary-light: hsl(212, 100%, 60%);
+    --filter-primary: invert(39%) sepia(75%) saturate(6272%) hue-rotate(204deg) brightness(105%) contrast(106%);
+    --background-color: #{$neutral-95};
+    --midground-color: #{$neutral-90};
+    --foreground-color: #{$neutral-100};
+
+    // shadow
+    --shadow: #{$neutral-90};
+
+    // borders
+    --border: #{$border-color};
+    --border-light: #{$border-color-dark};
+    --border-dark: #{$border-color-light};
+
+    // // Notification colors 
+    --color-success-dark:#{$success-color-dark};
+    --color-success-light: #{$success-color-light};
+    --color-error-dark:#{$error-color-dark};
+    --color-error-light: #{$error-color-light};
+    --color-warning-dark:#{$warning-color-dark};
+    --color-warning-light: #{$warning-color-light};
+
 }

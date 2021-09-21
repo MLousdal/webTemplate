@@ -8,7 +8,7 @@
   "license": "MIT",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel",
+    "dev": "parcel --no-cache",
     "build": "parcel build --public-url ./"
   },
   "devDependencies": {
