@@ -22,23 +22,35 @@
 
 
 <!-- Theme toggle -->
-<div class="center wrap gap box">
-    <button onclick="toggleTheme()" aria-label="theme-toggle" class="theme-toggle">
-        <img src="assets/images/icons/theme-toggle/icon-moon.svg" alt="Theme toggle" class="icon icon-black" id="toLight">
-        <img src="assets/images/icons/theme-toggle/icon-sun.svg" alt="Theme toggle" class="icon hide" id="toDark">
-    </button>
-</div>
+<input type="checkbox" id="themeToggle" aria-label="theme-toggle" class="toggle large">
 <script>
 const body = document.querySelector("body");
-const themeToggle = document.querySelector("#themeToggle");
+const mqPCS = window.matchMedia("prefers-color-scheme");
 
-themeToggle.addEventListener("click", () => {
-  if (body.classList.contains("theme-light")) {
-    body.classList.replace("theme-light", "theme-dark");
-  } else {
-    body.classList.replace("theme-dark", "theme-light");
+window.onload = () => {
+  const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  
+  if(userPrefersDark){
+    body.classList.add("theme-dark");
   }
-});
+  
+  if(userPrefersLight){
+    body.classList.add("theme-light");
+  }
+  
+}
+
+const themeToggle = document.querySelector("#themeToggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    if (body.classList.contains("theme-light")) {
+      body.classList.replace("theme-light", "theme-dark");
+    } else {
+      body.classList.replace("theme-dark", "theme-light");
+    }
+  });
+}
 </script>
 
 <!-- Slider -->
