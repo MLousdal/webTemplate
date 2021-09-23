@@ -29,77 +29,88 @@
 // Flex
 .flex {
     display: flex !important;
-    
+
     &.center {
         justify-content: center;
         align-items: center;
     }
-    
+
     &.row {
         align-items: center;
         flex-direction: row;
     }
-    
+
     &.column {
         flex-direction: column;
     }
-    
+
     &.between {
         justify-content: space-between;
     }
-    
+
     &.end {
         justify-content: flex-end;
     }
-    
+
     &.wrap {
         flex-wrap: wrap;
     }
-    
+
     &.align-start {
         align-items: flex-start;
     }
-    
+
     &.align-end {
         align-self: flex-end;
     }
-    
+
     &.align-center {
         align-self: center;
     }
-    
+
     &.gap-1 {
         gap: $unit-1;
     }
-    
+
     &.gap {
         gap: $unit-2;
     }
-    
+
     &.gap-3 {
         gap: $unit-3;
     }
-    
+
     &.row-reverse {
         flex-direction: row-reverse;
     }
-    
+
     &.full-right {
         margin-left: auto;
     }
-    
+
     &.full-left {
         margin-right: auto;
     }
 }
-    
-    // Text
-    .center-text {
-    text-align: center;
-}
 
-.left-text {
-    text-align: left;
+// Text
+
+.text {
+    &.center {
+        text-align: center;
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.right {
+        text-align: right;
+    }
+
+    &.justify {
+        text-align: justify;
+    }
 }
 
 // Columns

@@ -113,16 +113,32 @@ mark {
     color: var(--font-color-inverse);
 }
 
-q,
-blockquote {
+q {
     display: inline;
     quotes: unset;
 
-    &::before {
-        content: open-quote;
-    }
-    &::after {
-        content: close-quote;
+        &::before {
+            content: open-quote;
+        }
+        &::after {
+            content: close-quote;
+        }
+}
+
+blockquote {
+    display: inline;
+    quotes: unset;
+    border-left: 2px solid var(--border-dark);
+    padding-left: $layout-spacing;
+
+    p {
+
+        &::before {
+            content: open-quote;
+        }
+        &::after {
+            content: close-quote;
+        }
     }
 }
 

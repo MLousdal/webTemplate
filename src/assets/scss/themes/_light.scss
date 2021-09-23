@@ -3,6 +3,8 @@
 .theme-light {
    // typography
     --font-color: #{$neutral-0};
+    --font-color-dark: #{$neutral-20};
+    --font-color-light: #{$neutral-80};
     --font-color-inverse: #{$neutral-100};
     --font-color-form: #{$neutral-25};
     --filter-font-color: invert(0%) sepia(11%) saturate(7481%) hue-rotate(175deg) brightness(110%) contrast(91%);
