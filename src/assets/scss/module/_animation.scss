@@ -24,14 +24,13 @@
     position: absolute;
     top: 50%;
     width: $unit-1;
+  }
 
-    // &.btn-primary,
-    // &.btn-success,
-    // &.btn-error,
-    // &.btn-warning {
-    //   border-left-color: $neutral-5;
-    //   border-bottom-color: $neutral-5;
-    // }
+  &.btn-success::after,
+  &.btn-error::after,
+  &.btn-warning::after {
+    border-left-color: $neutral-0;
+    border-bottom-color: $neutral-0;
   }
 
   &.loading-lg {
