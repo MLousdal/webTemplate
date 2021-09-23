@@ -21,6 +21,8 @@ $layout-spacing-m: $unit-2;
 $layout-spacing-l: $unit-4;
 
 // Border variables 
+$border-width: 1px;
+$border-width-thick: 2px;
 $border-radius: $unit-05;
 $border-radius-s: calc(#{$border-radius} * 0.5);
 $border-radius-l: calc(#{$border-radius} * 1.5);

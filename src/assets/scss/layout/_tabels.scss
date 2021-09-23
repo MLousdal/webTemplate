@@ -9,7 +9,7 @@ td {
   padding: $unit-1 $unit-05;
   text-align: left;
   white-space: nowrap;
-  border-bottom: 1px solid var(--border);
+  border-bottom: $border-width solid var(--border);
 
   &:not(:first-child, :last-child) {
     padding: inherit 0;
@@ -17,7 +17,7 @@ td {
 }
 
 th {
-  border-bottom: 2px solid var(--border);
+  border-bottom: $border-width-thick solid var(--border);
 }
 
 @media (max-width: 550px) {

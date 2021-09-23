@@ -17,16 +17,16 @@ input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: $border-radius-s;
-  border: 1px solid var(--border);
+  border: $border-width solid var(--border);
   cursor: pointer;
   width: fit-content;
-  margin: 1px;
+  margin: $border-width;
 
   &:hover,
   &:focus,
   &.active {
     color: var(--border-dark);
-    border-width: 2px;
+    border-width: $border-width-thick;
     border-color: var(--border-dark);
     text-decoration: none;
     margin: 0;

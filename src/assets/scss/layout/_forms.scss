@@ -18,13 +18,13 @@ select {
   color: var(--font-color-form);
   padding: $unit-05;
   background-color: #fff;
-  border: 1px solid #d1d1d1;
+  border: $border-width solid #d1d1d1;
   border-radius: $border-radius-s;
   box-shadow: none;
   box-sizing: border-box;
 
   &:focus {
-    border: 2px solid var(--color-primary);
+    border: $border-width-thick solid var(--color-primary);
     outline: 0;
   }
 }

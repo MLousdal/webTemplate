@@ -86,19 +86,6 @@ samp {
     font-size: 1rem;
 }
 
-code {
-    position: relative;
-
-    &[data-lang]::before {
-        content: attr(data-lang);
-        position: absolute;
-        top: 0;
-        right: $unit-05;
-        opacity: 0.7;
-        font-family: inherit;
-      }
-}
-
 del,
 s {
     text-decoration: line-through;
@@ -141,7 +128,7 @@ q {
 blockquote {
     display: inline;
     quotes: unset;
-    border-left: 2px solid var(--border-dark);
+    border-left: $border-width-thick solid var(--border-dark);
     padding-left: $layout-spacing;
 
     p {

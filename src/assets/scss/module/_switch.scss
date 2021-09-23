@@ -19,7 +19,7 @@ label .toggle + span{
     display: inline-block !important;
     position: relative;
     margin: 1px;
-    border: 1px solid var(--border-dark);
+    border: $border-width solid var(--border-dark);
 
     &:before {
         content: "";

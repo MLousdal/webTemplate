@@ -7,8 +7,10 @@
   &::after {
     animation: loading 500ms infinite linear;
     background: transparent;
-    border: 2px solid var(--font-color);
+    border: $border-width-thick solid;
     border-radius: $border-radius-o;
+    border-left-color: var(--font-color);
+    border-bottom-color: var(--font-color);
     border-right-color: transparent;
     border-top-color: transparent;
     content: "";
@@ -23,6 +25,13 @@
     top: 50%;
     width: $unit-1;
 
+    // &.btn-primary,
+    // &.btn-success,
+    // &.btn-error,
+    // &.btn-warning {
+    //   border-left-color: $neutral-5;
+    //   border-bottom-color: $neutral-5;
+    // }
   }
 
   &.loading-lg {

@@ -24,7 +24,7 @@
 }
 
 .divider {
-  border-top: 1px solid var(--border);
+  border-top: $border-width solid var(--border);
   width: 100%;
 
   &[data-content]::after {
@@ -40,7 +40,7 @@
 
   &[data-content]::before {
     content: "";
-    border-left: 1px solid var(--border);
+    border-left: $border-width solid var(--border);
     left: 50%;
     bottom: 0;
     position: absolute;

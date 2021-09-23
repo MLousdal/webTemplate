@@ -26,6 +26,14 @@
     display: none;
 }
 
+.capitalize {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
 // Flex
 .flex {
     display: flex !important;
