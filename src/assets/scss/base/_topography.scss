@@ -86,6 +86,19 @@ samp {
     font-size: 1rem;
 }
 
+code {
+    position: relative;
+
+    &[data-lang]::before {
+        content: attr(data-lang);
+        position: absolute;
+        top: 0;
+        right: $unit-05;
+        opacity: 0.7;
+        font-family: inherit;
+      }
+}
+
 del,
 s {
     text-decoration: line-through;
