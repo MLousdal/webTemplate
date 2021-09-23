@@ -1,9 +1,15 @@
 @use "../base/variables" as *;
 
-.hero {
+.heroIndex {
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
     gap: $unit-6;
+}
+
+@media (max-width: 500px) {
+    .heroShowcase h1 {
+        font-size: 3.6rem;
+    }
 }
