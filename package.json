@@ -1,8 +1,7 @@
 {
-  "name": "webtemplate",
-  "version": "3.0.0",
-  "description": "webTemplate is a template for websites that supply me with the variables, and classes I need to start a new project! 🚀",
-  "keywords": [],
+  "name": "webTemplate",
+  "version": "3.1.10",
+  "description": "webTemplate serves as a springboard to use when diving into a new project 🏊",
   "author": "MLousdal",
   "url": "madslousdal.dk",
   "license": "MIT",
@@ -16,9 +15,7 @@
     "@parcel/transformer-sass": "^2.0.0-rc.0",
     "autoprefixer": "^10.3.2",
     "parcel": "^2.0.0-rc.0",
-    "parcel-plugin-static-files-copy": "^2.6.0",
     "parcel-reporter-static-files-copy": "^1.3.0",
     "sass": "^1.38.1"
-  },
-  "dependencies": {}
+  }
 }
