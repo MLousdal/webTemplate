@@ -1,4 +1,5 @@
 # 🌐 webTemplate
+
 ## 👓 Overview
 
 webTemplate serves as a spring board to use when diving in to a new project 🏊
@@ -23,6 +24,7 @@ webTemplate utilizes [Autoprefixer](https://github.com/postcss/autoprefixer) as 
 ## 🗄️ Files included
 
 When opening the repo you will find an almost clean index.html, and a showcase.html for all the styled elements. The scss folder is organized according to the principles described in [SMACSS](http://smacss.com/).
+
 ```
 webTemplate/src/
 ├── index.html
@@ -42,14 +44,14 @@ webTemplate/src/
 ## ⚙️ Compiling
 
 ```bash
-🚀 Initialize node 
+🚀 Initialize node
 $ npm i
 
 👨‍💻 Development
 $ npm run dev
 
 📯 Distribution
-$ npm run build 
+$ npm run build
 ```
 
 ## 🎫 License
