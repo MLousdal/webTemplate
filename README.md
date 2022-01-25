@@ -2,7 +2,9 @@
 ## 👓 Overview
 
 webTemplate serves as a spring board to use when diving in to a new project 🏊
-- Setup with parcel for compiling 
+
+- Already using framework? Just copy the assets folder and you're off!
+- Setup with parcel for compiling
 - SASS structure in place for easy development
 - Pre styled versions of the most common html tags
 - modules available with html, a partial scss file and js
