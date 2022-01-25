@@ -1,7 +1,6 @@
 @use "../base/variables" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Yanone+Kaffeesatz:wght@400;700&display=swap");
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -18,28 +17,27 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-weight: 400;
+    font-weight: 700;
+    font-family: "Yanone Kaffeesatz", sans-serif;
 }
 h1 {
-    font-size: clamp(3.8em, 10vw, 4.5rem);
+    font-size: clamp(2.15em, 7vw, 4.5rem);
     line-height: 1.2;
 }
 h2 {
-    font-size: 3.5rem;
+    font-size: clamp(1.95em, 7vw, 3.5rem);
     line-height: 1.25;
 }
 h3 {
-    font-size: 3rem;
+    font-size: clamp(1.5em, 7vw, 3rem);
     line-height: 1.3;
 }
 h4 {
-    font-size: 2rem;
+    font-size: clamp(1em, 7vw, 2rem);
     line-height: 1.35;
-
 }
 h5 {
     font-size: 1.5rem;
-
 }
 h6 {
     font-size: 0.875rem;
@@ -47,7 +45,7 @@ h6 {
 
 // Body text
 p {
-    max-width: 70ch;
+    // max-width: 70ch;
 }
 
 .small-text,
@@ -57,6 +55,10 @@ small {
 
 .large-text {
     font-size: 1.25rem;
+}
+
+.xlarge-text {
+    font-size: clamp(0.7em, 5vw, 2rem);
 }
 
 .semi-bold,
@@ -112,12 +114,12 @@ q {
     display: inline;
     quotes: unset;
 
-        &::before {
-            content: open-quote;
-        }
-        &::after {
-            content: close-quote;
-        }
+    &::before {
+        content: open-quote;
+    }
+    &::after {
+        content: close-quote;
+    }
 }
 
 blockquote {
@@ -127,7 +129,6 @@ blockquote {
     padding-left: $layout-spacing;
 
     p {
-
         &::before {
             content: open-quote;
         }
@@ -170,22 +171,21 @@ address {
 a {
     font-weight: 700;
     text-decoration: none;
-    color: var(--color-primary);
+    color: inherit;
 
     &:hover,
     &:focus {
         text-decoration: underline;
-        color: var(--color-primary-light);
+        cursor: pointer;
     }
 }
 
 .external-link {
     margin: 0 4px 0 2px;
-
     &::after {
         content: "";
         filter: var(--filter-primary);
-        background-image: url(../images/icons/mdi_open-in-new.svg);
+        background-image: url(../icons/mdi_open-in-new.svg);
         background-size: cover;
         position: relative;
         display: inline-block;

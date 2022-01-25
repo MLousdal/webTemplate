@@ -1,20 +1,20 @@
 // Unit variables 
-$unit-05: 0.5rem;
-$unit-1: 1rem;
-$unit-15: 1.5rem;
-$unit-2: 2rem;
-$unit-25: 2.5rem;
-$unit-3: 3rem;
-$unit-35: 3.5rem;
-$unit-4: 4rem;
-$unit-45: 4.5rem;
-$unit-5: 5rem;
-$unit-55: 5.5rem;
-$unit-6: 6rem;
-$unit-65: 6.5rem;
-$unit-7: 7rem;
-$unit-75: 7.5rem;
-$unit-8: 8rem;
+$unit-05: 0.5em;
+$unit-1: 1em;
+$unit-15: 1.5em;
+$unit-2: 2em;
+$unit-25: 2.5em;
+$unit-3: 3em;
+$unit-35: 3.5em;
+$unit-4: 4em;
+$unit-45: 4.5em;
+$unit-5: 5em;
+$unit-55: 5.5em;
+$unit-6: 6em;
+$unit-65: 6.5em;
+$unit-7: 7em;
+$unit-75: 7.5em;
+$unit-8: 8em;
 
 $layout-spacing: $unit-1;
 $layout-spacing-m: $unit-2;
@@ -22,17 +22,18 @@ $layout-spacing-l: $unit-4;
 
 // Border variables 
 $border-width: 1px;
-$border-width-thick: 2px;
+$border-offset: 2px;
+$border-width-thick: 3px;
 $border-radius: $unit-05;
 $border-radius-s: calc(#{$border-radius} * 0.5);
 $border-radius-l: calc(#{$border-radius} * 1.5);
 $border-radius-o: calc(#{$border-radius} * 100);
 
 // Shadows 
-$shadow-offset: 0px 0px;
-$shadow-normal: #{$shadow-offset} 6px 6px;
-$shadow-normal-s: #{$shadow-offset} 3px 3px;
-$shadow-normal-l: #{$shadow-offset} 12px 12px;
+$shadow-offset: 2px 2px;
+$shadow-normal: #{$shadow-offset} 4px 2px;
+$shadow-normal-s: #{$shadow-offset} 2px 0px;
+$shadow-normal-l: #{$shadow-offset} 8px 4px;
 
 //  Neutral colors
 $neutral-100: hsl(0, 0%, 100%);

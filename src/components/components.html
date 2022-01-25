@@ -74,21 +74,3 @@ if (themeToggle) {
         <span class="checkbox-text">Checkbox text here!</span>
     </label>
 </li>
-
-<!-- toTopBtn -->
-<button onclick="topFunction()" id="toTopBtn" title="Go to top" class="scale"><img src="assets/images/icons/toTopBtn/arrow-up-solid.svg" alt=""></button>
-<script>
-    // Scroll to top button, based on example from w3schools (https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
-toTopBtn = document.querySelector("#toTopBtn");
-
-// Denne kode gør at knappen dukker op når brugeren har rullet 20px ned ad siden
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    toTopBtn.style.display = "block";
-  } else {
-    toTopBtn.style.display = "none";
-  }
-}
-</script>

@@ -32,6 +32,7 @@
 
 .background-primary {
   background-color: var(--color-primary);
+  color: var(--font-color-inverse);
 }
 
 .background-dark {
@@ -62,4 +63,8 @@
 .background-error {
   background-color: $error-color;
   color: $neutral-0;
+}
+
+.filter-font-color {
+  filter: var(--filter-font-color);
 }

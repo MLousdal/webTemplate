@@ -1,31 +1,34 @@
 @use "../base/variables" as *;
 
+.input,
 input[type="date"],
 input[type="datetime-local"],
 input[type="email"],
 input[type="file"],
 input[type="month"],
 input[type="number"],
+input[type="password"],
 input[type="search"],
-input[type="text"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
-input[type="password"],
 input[type="week"],
 textarea,
 select {
   color: var(--font-color-form);
-  padding: $unit-05;
+  padding: $unit-1;
   background-color: #fff;
   border: $border-width solid #d1d1d1;
   border-radius: $border-radius-s;
   box-shadow: none;
   box-sizing: border-box;
+  margin: $border-offset;
+  font-family: inherit;
 
   &:focus {
     border: $border-width-thick solid var(--color-primary);
-    outline: 0;
+    margin: 0;
+    outline: none;
   }
 }
 

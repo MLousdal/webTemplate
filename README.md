@@ -7,6 +7,7 @@ webTemplate serves as a spring board to use when diving in to a new project 🏊
 - Pre styled versions of the most common html tags
 - modules available with html, a partial scss file and js
 - It's a starting point, not a framework
+- Includes styled Vue components
 
 ## 💻 Browser support
 
@@ -31,7 +32,6 @@ webTemplate/src/
     └── scss
         ├── base
         ├── layout
-        ├── mixins
         ├── module
         ├── themes
         └── main.scss

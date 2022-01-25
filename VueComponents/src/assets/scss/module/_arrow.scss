@@ -1,0 +1,27 @@
+@use "../base/variables" as *;
+
+.arrow {
+    all: unset;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+    height: $unit-2;
+    padding: 0;
+    position: relative;
+    width: $unit-2;
+    filter: var(--filter-primary);
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}

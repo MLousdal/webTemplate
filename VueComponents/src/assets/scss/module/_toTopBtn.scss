@@ -1,0 +1,16 @@
+@use "../base/variables" as *;
+
+#toTopBtn {
+    position: fixed;
+    bottom: $unit-2;
+    right: $unit-2;
+    width: $unit-1;
+    height: $unit-1;
+    z-index: 5;
+    border: none;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    padding: $unit-05;
+    border-radius: $border-radius;
+    box-sizing: content-box;
+}

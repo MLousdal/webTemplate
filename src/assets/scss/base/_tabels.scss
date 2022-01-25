@@ -14,15 +14,23 @@ td {
   &:not(:first-child, :last-child) {
     padding: inherit 0;
   }
+  &:last-child {
+    text-align: right;
+  }
 }
 
 th {
   border-bottom: $border-width-thick solid var(--border);
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .table-container {
-    width: 100%;
     overflow-x: scroll;
+  }
+  tr {
+    th:last-child,
+    td:last-child {
+      text-align: left;
+    }
   }
 }

@@ -5,22 +5,25 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  font-family: unset;
-  padding: $unit-05 $unit-15;
-  color: var(--border);
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-unit: 0.1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
   background-color: transparent;
   border-radius: $border-radius-s;
   border: $border-width solid var(--border);
+  color: var(--border);
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: $unit-05;
+  align-items: center;
+  font-family: unset;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: $border-offset;
+  padding: $unit-05 $unit-15;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
   width: fit-content;
-  margin: $border-width;
 
   &:hover,
   &:focus,
@@ -32,23 +35,24 @@ input[type="button"] {
     margin: 0;
   }
 
-  &.btn-sm {
+  &.s {
     font-size: 0.6rem;
   }
 
-  &.btn-lg {
-    font-size: 1rem;
+  &.l {
+    font-size: 1.2rem;
+    // padding: $unit-1 $unit-15;
   }
 
   &[disabled],
   &:disabled,
   &.disabled {
     cursor: not-allowed;
-    opacity: .5;
+    opacity: 0.5;
     pointer-events: none;
   }
 
-  &.btn-primary {
+  &.primary {
     color: var(--font-color-inverse);
     background-color: var(--color-primary);
     border-color: var(--color-primary);
@@ -61,7 +65,33 @@ input[type="button"] {
     }
   }
 
-  &.btn-success {
+  &.secondary {
+    color: var(--font-color);
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: var(--color-secondary-light);
+      border-color: var(--color-secondary-light);
+    }
+  }
+
+  &.contrast {
+    color: var(--font-color-inverse);
+    background-color: var(--font-color);
+    border-color: var(--font-color);
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: var(--font-color-dark);
+      border-color: var(--font-color-dark);
+    }
+  }
+
+  &.success {
     color: $neutral-0;
     background-color: $success-color;
     border-color: $success-color;
@@ -74,7 +104,7 @@ input[type="button"] {
     }
   }
 
-  &.btn-warning {
+  &.warning {
     color: $neutral-0;
     background-color: $warning-color;
     border-color: $warning-color;
@@ -87,7 +117,7 @@ input[type="button"] {
     }
   }
 
-  &.btn-error {
+  &.error {
     color: $neutral-0;
     background-color: $error-color;
     border-color: $error-color;
@@ -97,6 +127,29 @@ input[type="button"] {
     &.active {
       background-color: var(--color-error-light);
       border-color: var(--color-error-light);
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .btn,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    font-size: 0.65rem;
+  
+    &.s {
+      font-size: 0.4rem;
+    }
+  
+    &.l {
+      font-size: 0.8rem;
+      padding: $unit-1 $unit-15;
     }
   }
 }

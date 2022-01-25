@@ -1,0 +1,111 @@
+@use "../base/variables" as *;
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: $unit-1;
+
+  &.box {
+    padding: $unit-15;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .logo {
+    img {
+      filter: var(--filter-primary);
+      display: block;
+    }
+  }
+
+  .navContainer {
+    display: flex;
+    flex-direction: row;
+    gap: $unit-2;
+    width: 100%;
+  }
+
+  .navLinksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: $unit-1;
+  }
+
+  .navSocial {
+    display: flex;
+    gap: $unit-2;
+    flex-direction: row;
+  }
+
+  .navBtn {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .navBtn {
+      display: block;
+    }
+    .navLinksContainer {
+      background-color: var(--foreground-color);
+      border-radius: 0 0 0 $border-radius;
+      box-shadow: -2px 2px var(--shadow);
+      flex-direction: column;
+      gap: $unit-2;
+      padding: $unit-1 $unit-2 $unit-3 $unit-3;
+      position: absolute;
+      right: 0;
+      top: $unit-35;
+      width: fit-content;
+    }
+
+    .navLinks {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: $unit-05;
+      align-items: flex-end;
+    }
+
+    .navSocial {
+      display: flex;
+      gap: $unit-2;
+      align-items: flex-end;
+      flex-direction: column;
+      margin-left: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav.box {
+    align-items: flex-start;
+    padding: $unit-1;
+  }
+}

@@ -1,5 +1,3 @@
-// import * as classes from '../scss/main.scss'; // For css in js
-
 // Theme toggle
 const body = document.querySelector("body");
 const mqPCS = window.matchMedia("prefers-color-scheme");

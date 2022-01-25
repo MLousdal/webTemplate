@@ -1,0 +1,60 @@
+@use "../base/variables" as *;
+
+// Original kode fra Himalaya Singh
+// https://codepen.io/himalayasingh/pen/mNOJPM
+
+#navbar_checkbox,
+#subnav_checkbox {
+  display: none;
+}
+
+.navBtn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  div {
+    position: relative;
+    top: 0;
+    height: 6px;
+    background-color: var(--color-primary);
+    margin-bottom: 6px;
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+    border-radius: 2px;
+  }
+
+  div:first-child {
+    transform-origin: 0;
+  }
+
+  div:last-child {
+    margin-bottom: 0;
+    transform-origin: 30px;
+  }
+
+  div:nth-child(2) {
+    right: 0;
+    width: 30px;
+  }
+}
+
+#subnav_checkbox:checked + .navBtn div:first-child,
+#navbar_checkbox:checked + .navBtn div:first-child {
+  top: -3px;
+  transform: rotateZ(45deg);
+}
+
+#subnav_checkbox:checked + .navBtn div:last-child,
+#navbar_checkbox:checked + .navBtn div:last-child {
+  top: 3px;
+  transform: rotateZ(45deg);
+}
+
+#subnav_checkbox:checked + .navBtn div:nth-child(2),
+#navbar_checkbox:checked + .navBtn div:nth-child(2) {
+  width: 42.5px;
+  top: 0;
+  right: 6.5px;
+  transform: rotateZ(-45deg);
+}
