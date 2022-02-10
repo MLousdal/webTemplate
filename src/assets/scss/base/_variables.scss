@@ -1,4 +1,4 @@
-// Unit variables 
+// Unit variables
 $unit-05: 0.5em;
 $unit-1: 1em;
 $unit-15: 1.5em;
@@ -16,11 +16,20 @@ $unit-7: 7em;
 $unit-75: 7.5em;
 $unit-8: 8em;
 
+// Generated using https://www.fluid-type-scale.com/
+$font-size-sm: clamp(0.8rem, 0.41vw + 0.71rem, 1.03rem);
+$font-size-base: clamp(1rem, 0.66vw + 0.85rem, 1.38rem);
+$font-size-md: clamp(1.25rem, 1.02vw + 1.01rem, 1.83rem);
+$font-size-lg: clamp(1.56rem, 1.55vw + 1.2rem, 2.44rem);
+$font-size-xl: clamp(1.95rem, 2.29vw + 1.42rem, 3.26rem);
+$font-size-xxl: clamp(2.44rem, 3.34vw + 1.67rem, 4.34rem);
+$font-size-xxxl: clamp(3.05rem, 4.81vw + 1.94rem, 5.79rem);
+
 $layout-spacing: $unit-1;
 $layout-spacing-m: $unit-2;
 $layout-spacing-l: $unit-4;
 
-// Border variables 
+// Border variables
 $border-width: 1px;
 $border-offset: 2px;
 $border-width-thick: 3px;
@@ -29,7 +38,7 @@ $border-radius-s: calc(#{$border-radius} * 0.5);
 $border-radius-l: calc(#{$border-radius} * 1.5);
 $border-radius-o: calc(#{$border-radius} * 100);
 
-// Shadows 
+// Shadows
 $shadow-offset: 2px 2px;
 $shadow-normal: #{$shadow-offset} 4px 2px;
 $shadow-normal-s: #{$shadow-offset} 2px 0px;
@@ -62,16 +71,16 @@ $border-color: #{$neutral-35};
 $border-color-dark: #{$neutral-10};
 $border-color-light: #{$neutral-55};
 
-// Notification colors 
+// Notification colors
 $success-color: hsl(87, 78%, 55%);
-$success-color-dark: hsl(87, 78%, 35%);
-$success-color-light: hsl(87, 78%, 75%);
+$success-color-dark: darken($success-color, 20%);
+$success-color-light: lighten($success-color, 20%);
 $warning-color: hsl(47, 78%, 55%);
-$warning-color-dark: hsl(47, 78%, 35%);
-$warning-color-light: hsl(47, 78%, 75%);
+$warning-color-dark: darken($warning-color, 20%);
+$warning-color-light: lighten($warning-color, 20%);
 $error-color: hsl(7, 78%, 55%);
-$error-color-dark: hsl(7, 78%, 35%);
-$error-color-light: hsl(7, 78%, 75%);
+$error-color-dark: darken($error-color, 20%);
+$error-color-light: lighten($error-color, 20%);
 
 // Text colors for notifications
 $success-font-color: hsl(0, 0%, 0%);

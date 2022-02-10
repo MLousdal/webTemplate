@@ -1,6 +1,6 @@
 {
   "name": "webTemplate",
-  "version": "3.1.10",
+  "version": "3.2.0",
   "description": "webTemplate serves as a springboard to use when diving into a new project 🏊",
   "author": "MLousdal",
   "license": "MIT",
@@ -16,5 +16,6 @@
     "parcel": "^2.0.1",
     "parcel-reporter-static-files-copy": "^1.3.4",
     "sass": "^1.38.1"
-  }
+  },
+  "dependencies": {}
 }
